@@ -7,7 +7,9 @@ import { GatsbyImage } from "gatsby-plugin-image"
 const Post = ({ title, path, date, body, image }) => {
   return (
     <Card>
-      <GatsbyImage className="card-image-top" image={image} />
+      <Link to={path}>
+        <GatsbyImage className="card-image-top" image={image} />
+      </Link>
       <CardBody>
         <CardTitle><Link to={path}>{title}</Link></CardTitle>
         <CardSubtitle><span className="test-info">{date}</span></CardSubtitle>
