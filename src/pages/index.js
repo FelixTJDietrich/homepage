@@ -6,29 +6,37 @@ import Seo from "../components/seo"
 import Post from "../components/Post"
 
 import { getImage } from "gatsby-plugin-image"
+import { Row, Col } from "reactstrap"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <h1>Homepage</h1>
-    <StaticQuery 
-      query={indexQuery} 
-      render={data => {
-        return (
-          <div>
-            {data.allMarkdownRemark.edges.map(({ node }) => (
-              <Post 
-                title={node.frontmatter.title}
-                date={node.frontmatter.date}
-                path={node.frontmatter.path}
-                body={node.excerpt}
-                image={getImage(node.frontmatter.image)}
-              />
-            ))}
-          </div>
-        )
-      }}
-    />
+    <Row>
+      <Col md="8">
+        <StaticQuery 
+        query={indexQuery} 
+        render={data => {
+          return (
+            <div>
+              {data.allMarkdownRemark.edges.map(({ node }) => (
+                <Post 
+                  title={node.frontmatter.title}
+                  date={node.frontmatter.date}
+                  path={node.frontmatter.path}
+                  body={node.excerpt}
+                  image={getImage(node.frontmatter.image)}
+                />
+              ))}
+            </div>
+          )
+        }}
+        />
+      </ Col>
+      <Col md="4">
+        <div style={{width: "100%", height: "100%", backgroundColor: "rgba(0,0,0,0.4)"}}></div>
+      </Col>
+    </ Row>
   </Layout>
 )
 
