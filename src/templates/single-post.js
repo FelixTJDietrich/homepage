@@ -6,8 +6,27 @@ import { Card, CardBody, CardSubtitle, Badge } from "reactstrap";
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { slugify } from "../util/utilityFunctions";
 
-const SinglePost = ({ data }) => {
+import author from "../util/author";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+  faFacebookF,
+  faLinkedin,
+  faTwitter,
+} from '@fortawesome/free-brands-svg-icons'
+
+import { DiscussionEmbed } from "disqus-react";
+
+const SinglePost = ({ data, pageContext }) => {
   const post = data.markdownRemark.frontmatter
+  const baseUrl = "https://felixdietrich.com/"
+
+  const disqusShortname = "felixtjdietrich"
+  const disqusConfig = {
+    identifier: data.markdownRemark.id,
+    title: post.title,
+    url: baseUrl + pageContext.slug,
+  }
+
   return (
     <Layout pageTitle={post.title}>
       <Seo title={post.title}/>
@@ -31,6 +50,55 @@ const SinglePost = ({ data }) => {
           </ul>
         </CardBody>
       </Card>
+      <h3 className="text-center">
+        Share this post
+      </h3>
+      <div className="text-center social-share-links">
+        <ul>
+          <li>
+            <a 
+              href={"https://www.facebook.com/sharer/sharer.php?u=" + baseUrl + pageContext.slug} 
+              className="facebook" 
+              target="_black" 
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faFacebookF} size="2x" fixedWidth/>
+            </a>
+          </li>
+          <li>
+            <a 
+              href={
+                "https://www.twitter.com/share?url=" + 
+                baseUrl + 
+                pageContext.slug + 
+                "&text=" + 
+                post.title +
+                "&via=" +
+                author.twitterHandle
+              } 
+              className="twitter" 
+              target="_black" 
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faTwitter} size="2x" fixedWidth/>
+            </a>
+          </li>
+          <li>
+            <a 
+              href={
+                "https://www.linkedin.com/shareArticle?url=" + 
+                baseUrl + pageContext.slug
+              } 
+              className="linkedin" 
+              target="_black" 
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth/>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig}/>
     </Layout>
   )
 }

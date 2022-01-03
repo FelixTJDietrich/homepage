@@ -21,13 +21,17 @@ const Sidebar = () => (
         <div className="author-social-links text-center">
           <ul>
             <li>
-              <a href={author.twitter} target="_blank" rel="noopener noreferrer" className="twitter">
+              <a href={"https://www.twitter.com/" + author.twitterHandle} target="_blank" rel="noopener noreferrer" className="twitter">
                 <FontAwesomeIcon icon={faTwitter} size="lg" fixedWidth/>
               </a>
-              <a href={author.instagram} target="_blank" rel="noopener noreferrer" className="instagram">
+            </li>
+            <li>
+              <a href={"https://www.instagram.com/" + author.instagramHandle} target="_blank" rel="noopener noreferrer" className="instagram">
                 <FontAwesomeIcon icon={faInstagram} size="lg" fixedWidth/>
               </a>
-              <a href={author.github} target="_blank" rel="noopener noreferrer" className="github">
+            </li>
+            <li>
+              <a href={"https://www.github.com/" + author.githubHandle} target="_blank" rel="noopener noreferrer" className="github">
                 <FontAwesomeIcon icon={faGithub} size="lg" fixedWidth/>
               </a>
             </li>

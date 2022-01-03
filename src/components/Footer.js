@@ -20,15 +20,23 @@ const Footer = () => (
           <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="facebook">
             <FontAwesomeIcon icon={faFacebookF} size="2x" fixedWidth/>
           </a>
+        </li>
+        <li>
           <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="twitter">
             <FontAwesomeIcon icon={faTwitter} size="2x" fixedWidth/>
           </a>
+        </li>
+        <li>
           <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="instagram">
             <FontAwesomeIcon icon={faInstagram} size="2x" fixedWidth/>
           </a>
+        </li>
+        <li>
           <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" className="google">
             <FontAwesomeIcon icon={faGoogle} size="2x" fixedWidth/>
           </a>
+        </li>
+        <li>
           <a href="https://www.linkedin.com" target="_blank" rel="nooppener noreferrer" className="linkedin">
             <FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth/>
           </a>
