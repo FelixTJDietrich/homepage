@@ -29,12 +29,12 @@ const Sidebar = () => (
           <div>
             {data.allMarkdownRemark.edges.map(({ node }) => (
               <Card key={node.id}>
-                <Link to={node.frontmatter.path}>
+                <Link to={node.fields.slug}>
                   <GatsbyImage className="card-image-top" image={getImage(node.frontmatter.image)}/>
                 </Link>
                 <CardBody>
                   <CardTitle>
-                    <Link to={node.frontmatter.path}>
+                    <Link to={node.fields.slug}>
                       {node.frontmatter.title}
                     </Link>
                   </CardTitle>
@@ -59,12 +59,14 @@ const sidebardQuery = graphql`
           id
           frontmatter {
             title
-            path
             image {
               childImageSharp {
                 gatsbyImageData(width: 300)
               }
             }
+          }
+          fields {
+            slug
           }
         }
       }

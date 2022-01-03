@@ -1,11 +1,10 @@
 ---
-title: 'Third Post - CSS'
+title: "Third Post - CSS"
 date: 2022-01-04 09:00:00
-path: '/third-post'
-image: '../../images/javascript.jpg'
+image: "../../images/javascript.jpg"
 tags:
-- design
-- tutorial
+  - design
+  - tutorial
 ---
 
-Welcome to my third Blog. This blog post is for testing if the website is working. Welcome to my third Blog. This blog post is for testing if the website is working. Welcome to my third Blog. This blog post is for testing if the website is working. Welcome to my third Blog. This blog post is for testing if the website is working. 
+Welcome to my third Blog. This blog post is for testing if the website is working. Welcome to my third Blog. This blog post is for testing if the website is working. Welcome to my third Blog. This blog post is for testing if the website is working. Welcome to my third Blog. This blog post is for testing if the website is working.
