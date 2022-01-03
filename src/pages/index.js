@@ -4,6 +4,7 @@ import { graphql, StaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Post from "../components/Post"
+import Sidebar from "../components/Sidebar"
 
 import { getImage } from "gatsby-plugin-image"
 import { Row, Col } from "reactstrap"
@@ -35,7 +36,7 @@ const IndexPage = () => (
         />
       </ Col>
       <Col md="4">
-        <div style={{width: "100%", height: "100%", backgroundColor: "rgba(0,0,0,0.4)"}}></div>
+        <Sidebar />
       </Col>
     </ Row>
   </Layout>
