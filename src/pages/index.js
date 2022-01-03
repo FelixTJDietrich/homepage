@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Post from "../components/Post"
 
+import { getImage } from "gatsby-plugin-image"
+
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
@@ -20,6 +22,7 @@ const IndexPage = () => (
                 date={node.frontmatter.date}
                 path={node.frontmatter.path}
                 body={node.excerpt}
+                image={getImage(node.frontmatter.image)}
               />
             ))}
           </div>
@@ -39,6 +42,11 @@ const indexQuery = graphql`
             title
             date(formatString: "MMM Do YYYY")
             path
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 600)
+              }
+            }
           }
           excerpt
         }
