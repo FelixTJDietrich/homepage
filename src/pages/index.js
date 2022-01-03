@@ -5,8 +5,6 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Post from "../components/Post"
 
-import { getImage } from "gatsby-plugin-image"
-
 const IndexPage = () => (
   <Layout pageTitle="Home page">
     <Seo title="Home" />
@@ -23,7 +21,7 @@ const IndexPage = () => (
                 slug={node.fields.slug}
                 body={node.excerpt}
                 tags={node.frontmatter.tags}
-                image={getImage(node.frontmatter.image)}
+                image={node.frontmatter.image}
               />
             ))}
           </div>

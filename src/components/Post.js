@@ -1,14 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Card, CardTitle, CardText, CardSubtitle, CardBody, Badge } from "reactstrap"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { slugify } from "../util/utilityFunctions"
 
 const Post = ({ title, slug, date, body, tags, image }) => {
   return (
     <Card>
       <Link to={slug}>
-        <GatsbyImage className="card-image-top" image={image} style={{ width: "100%" }} imgStyle={{ objectFit: "cover" }}/>
+        <GatsbyImage className="card-image-top" image={getImage(image)} style={{ width: "100%" }} imgStyle={{ objectFit: "cover" }}/>
       </Link>
       <CardBody>
         <CardTitle><Link to={slug}>{title}</Link></CardTitle>
