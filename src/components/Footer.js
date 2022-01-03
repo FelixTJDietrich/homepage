@@ -17,16 +17,16 @@ const Footer = () => (
     <div className="footer-social-links">
       <ul className="social-links-list">
         <li>
-          <a href="https://www.facebook.com" target="_blank" rel="nooppener noreferrer" className="facebook">
+          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="facebook">
             <FontAwesomeIcon icon={faFacebookF} size="2x" fixedWidth/>
           </a>
-          <a href="https://www.twitter.com" target="_blank" rel="nooppener noreferrer" className="twitter">
+          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="twitter">
             <FontAwesomeIcon icon={faTwitter} size="2x" fixedWidth/>
           </a>
-          <a href="https://www.instagram.com" target="_blank" rel="nooppener noreferrer" className="instagram">
+          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="instagram">
             <FontAwesomeIcon icon={faInstagram} size="2x" fixedWidth/>
           </a>
-          <a href="https://www.google.com" target="_blank" rel="nooppener noreferrer" className="google">
+          <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" className="google">
             <FontAwesomeIcon icon={faGoogle} size="2x" fixedWidth/>
           </a>
           <a href="https://www.linkedin.com" target="_blank" rel="nooppener noreferrer" className="linkedin">
