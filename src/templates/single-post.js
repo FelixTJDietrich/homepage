@@ -74,7 +74,7 @@ const SinglePost = ({ data, pageContext }) => {
                 "&text=" + 
                 post.title +
                 "&via=" +
-                author.twitterHandle
+                author.handles.twitter
               } 
               className="twitter" 
               target="_black" 

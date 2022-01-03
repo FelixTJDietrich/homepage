@@ -1,14 +1,22 @@
 .author-social-links {
   ul {
-    display: inline-flex;
-
     li {
       margin: auto 7px;
+
+      svg {
+        margin-right: 4px;
+      }
 
       a {
         transition: all 0.1s ease-out;
         color: $dark-gray;
 
+        &.location:hover {
+          color: rgb(0, 128, 255);
+        }
+        &.email:hover {
+          color: black;
+        }
         &.instagram:hover {
           color: #e95950;
         }
@@ -24,6 +32,25 @@
         &.linkedin:hover {
           color: rgb(0, 119, 181);
         }
+        &.github:hover {
+          color: #4078c0;
+        }
+      }
+
+      a:link {
+        text-decoration: none;
+      }
+
+      a:visited {
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      a:active {
+        text-decoration: underline;
       }
     }
   }

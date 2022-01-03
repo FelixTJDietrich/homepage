@@ -11,6 +11,11 @@ import {
   faGithub, 
 } from '@fortawesome/free-brands-svg-icons'
 
+import { 
+  faMapMarkerAlt,
+  faEnvelopeSquare,
+} from '@fortawesome/free-solid-svg-icons'
+
 const Sidebar = () => (
   <div>
     <Card>
@@ -18,21 +23,32 @@ const Sidebar = () => (
       <CardBody>
         <CardTitle className="text-center text-uppercase mb-3">{author.name}</CardTitle>
         <CardText>{author.bio}</CardText>
-        <div className="author-social-links text-center">
+        
+        <div className="author-social-links text-left">
           <ul>
-            <li>
-              <a href={"https://www.twitter.com/" + author.twitterHandle} target="_blank" rel="noopener noreferrer" className="twitter">
-                <FontAwesomeIcon icon={faTwitter} size="lg" fixedWidth/>
+            <li style={{ marginBottom: "10px" }}>
+              <a href={author.location.url} target="_blank" rel="noopener noreferrer" className="location">
+                <FontAwesomeIcon icon={faMapMarkerAlt} size="lg" fixedWidth/>{author.location.title}
               </a>
             </li>
             <li>
-              <a href={"https://www.instagram.com/" + author.instagramHandle} target="_blank" rel="noopener noreferrer" className="instagram">
-                <FontAwesomeIcon icon={faInstagram} size="lg" fixedWidth/>
+              <a href={"mailto:" + author.email} target="_blank" rel="noopener noreferrer" className="email">
+                <FontAwesomeIcon icon={faEnvelopeSquare} size="lg" fixedWidth/>Email
               </a>
             </li>
             <li>
-              <a href={"https://www.github.com/" + author.githubHandle} target="_blank" rel="noopener noreferrer" className="github">
-                <FontAwesomeIcon icon={faGithub} size="lg" fixedWidth/>
+              <a href={"https://www.twitter.com/" + author.handles.twitter} target="_blank" rel="noopener noreferrer" className="twitter">
+                <FontAwesomeIcon icon={faTwitter} size="lg" fixedWidth/>Twitter
+              </a>
+            </li>
+            <li>
+              <a href={"https://www.instagram.com/" + author.handles.instagram} target="_blank" rel="noopener noreferrer" className="instagram">
+                <FontAwesomeIcon icon={faInstagram} size="lg" fixedWidth/>Instagram
+              </a>
+            </li>
+            <li>
+              <a href={"https://www.github.com/" + author.handles.github} target="_blank" rel="noopener noreferrer" className="github">
+                <FontAwesomeIcon icon={faGithub} size="lg" fixedWidth/>GitHub
               </a>
             </li>
           </ul>
