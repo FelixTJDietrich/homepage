@@ -9,7 +9,6 @@ import {
   NavbarToggler,
   NavItem,
   NavLink,
-  NavbarText,
 } from "reactstrap";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -53,9 +52,6 @@ class Header extends React.Component {
               </NavItem>
               <NavItem>
                 <NavLink href="/about">About</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/contact">Contact</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href={"https://www.twitter.com/" + author.handles.twitter} target="_blank" rel="noopener noreferrer" className="twitter">
