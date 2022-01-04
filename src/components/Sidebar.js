@@ -1,7 +1,9 @@
 import React from "react";
-import { Card, CardTitle, CardBody, CardText, Form, FormGroup, Input } from "reactstrap";
+import { Card, CardTitle, CardBody, CardText } from "reactstrap";
 import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
 import { graphql, Link, StaticQuery } from "gatsby";
+
+import Newsletter from "./Newsletter";
 
 import author from "../util/author";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -26,7 +28,7 @@ const Sidebar = () => (
         
         <div className="author-social-links text-left">
           <ul>
-            <li style={{ marginBottom: "10px" }}>
+            <li style={{ marginBottom: "5px" }}>
               <a href={author.location.url} target="_blank" rel="noopener noreferrer" className="location">
                 <FontAwesomeIcon icon={faMapMarkerAlt} size="lg" fixedWidth/>{author.location.title}
               </a>
@@ -53,21 +55,6 @@ const Sidebar = () => (
             </li>
           </ul>
         </div>
-      </CardBody>
-    </Card>
-    <Card>
-      <CardBody>
-        <CardTitle className="text-center text-uppercase mb-3">
-          Newsletter
-        </CardTitle>
-        <Form className="text-center">
-          <FormGroup>
-            <Input type="email" name="email" placeholder="Your email address..."/>
-          </FormGroup>
-          <button className="btn btn-outline-success text-uppercase">
-            Subscribe
-          </button>
-        </Form>
       </CardBody>
     </Card>
     <Card>
