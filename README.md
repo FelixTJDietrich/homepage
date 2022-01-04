@@ -1,6 +1,6 @@
 # Homepage
 
-This is the repository of my homepage [felixdietrich.com](felixdietrich.com).
+This is the repository of my homepage [felixdietrich.com](https://www.felixdietrich.com).
 
 ## Installation
 
