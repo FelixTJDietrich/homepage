@@ -9,7 +9,17 @@ import {
   NavbarToggler,
   NavItem,
   NavLink,
+  NavbarText,
 } from "reactstrap";
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { 
+  faTwitter, 
+  faInstagram, 
+  faGithub, 
+} from '@fortawesome/free-brands-svg-icons'
+
+import author from "../util/author";
 
 class Header extends React.Component {
   constructor(props) {
@@ -36,10 +46,31 @@ class Header extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ms-auto" navbar>
               <NavItem>
-                <NavLink href="/tags">Tags</NavLink>
+                <NavLink href="/">Blog</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/tags">Topics</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="/about">About</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/contact">Contact</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href={"https://www.twitter.com/" + author.handles.twitter} target="_blank" rel="noopener noreferrer" className="twitter">
+                  <FontAwesomeIcon icon={faTwitter} size="lg" fixedWidth/>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href={"https://www.instagram.com/" + author.handles.instagram} target="_blank" rel="noopener noreferrer" className="instagram">
+                  <FontAwesomeIcon icon={faInstagram} size="lg" fixedWidth/>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href={"https://www.github.com/" + author.handles.github} target="_blank" rel="noopener noreferrer" className="github">
+                  <FontAwesomeIcon icon={faGithub} size="lg" fixedWidth/>
+                </NavLink>
               </NavItem>
             </Nav>
           </Collapse>

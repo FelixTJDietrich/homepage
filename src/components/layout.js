@@ -12,7 +12,7 @@ import { graphql, StaticQuery } from "gatsby"
 import Sidebar from "../components/Sidebar"
 import { Row, Col } from "reactstrap"
 
-import Header from "./header"
+import Header from "./Header"
 import Footer from "./Footer"
 import "../styles/index.scss"
 
