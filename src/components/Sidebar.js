@@ -3,8 +3,6 @@ import { Card, CardTitle, CardBody, CardText } from "reactstrap";
 import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
 import { graphql, Link, StaticQuery } from "gatsby";
 
-import Newsletter from "./Newsletter";
-
 import author from "../util/author";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 

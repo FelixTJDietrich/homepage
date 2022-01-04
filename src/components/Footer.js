@@ -1,44 +1,35 @@
 import React from "react";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
-  faFacebookF, 
   faTwitter, 
   faInstagram, 
-  faLinkedin, 
-  faGoogle
+  faGithub, 
 } from '@fortawesome/free-brands-svg-icons'
+
+import author from "../util/author";
 
 const Footer = () => (
   <div className="site-footer">
     <div className="text-center">
-        Code Blog
+        Felix T.J. Dietrich
     </div>
     <p className="text-center">Follow me on social media</p>
     <div className="footer-social-links">
       <ul className="social-links-list">
         <li>
-          <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="facebook">
-            <FontAwesomeIcon icon={faFacebookF} size="2x" fixedWidth/>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" className="twitter">
+          <a href={"https://www.twitter.com/" + author.handles.twitter} target="_blank" rel="noopener noreferrer" className="twitter">
             <FontAwesomeIcon icon={faTwitter} size="2x" fixedWidth/>
           </a>
         </li>
         <li>
-          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="instagram">
+          <a href={"https://www.instagram.com/" + author.handles.instagram} target="_blank" rel="noopener noreferrer" className="instagram">
             <FontAwesomeIcon icon={faInstagram} size="2x" fixedWidth/>
           </a>
         </li>
         <li>
-          <a href="https://www.google.com" target="_blank" rel="noopener noreferrer" className="google">
-            <FontAwesomeIcon icon={faGoogle} size="2x" fixedWidth/>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com" target="_blank" rel="nooppener noreferrer" className="linkedin">
-            <FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth/>
+          <a href={"https://www.github.com/" + author.handles.github} target="_blank" rel="noopener noreferrer" className="github">
+            <FontAwesomeIcon icon={faGithub} size="2x" fixedWidth/>
           </a>
         </li>
       </ul>
