@@ -12,7 +12,7 @@ import author from "../util/author";
 const Footer = () => (
   <div className="site-footer">
     <div className="text-center">
-        Felix T.J. Dietrich
+      © Felix T.J. Dietrich 2022{ new Date().getFullYear() === 2022 ? "" : `-${new Date().getFullYear()}` }
     </div>
     <p className="text-center">Follow me on social media</p>
     <div className="footer-social-links">
