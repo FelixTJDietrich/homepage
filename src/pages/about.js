@@ -28,7 +28,7 @@ const AboutPage = () => (
           M.Sc. Informatics student at Technical University of Munich. 
         </CardSubtitle>
         <CardText>
-          Welcome to my website where try to share my thoughts, interests, and things I care about. 
+          Welcome to my website where I try to share my thoughts, interests, and things I care about. 
         </CardText>
       </CardBody>
     </Card>
@@ -38,7 +38,7 @@ const AboutPage = () => (
           How I like being called
         </CardTitle>
         <CardText>
-          I like being called by the initials of my middle names T.J. however you may want to pronounce it.
+          I like being called by the initials of my middle names T.J., however you may want to pronounce it.
         </CardText>
         <CardText>
           I also don't mind Felix.
