@@ -52,11 +52,11 @@ class Header extends React.Component {
                   Blog
                 </NavLink>
               </NavItem>
-              <NavItem>
+              {/* <NavItem>
                 <NavLink href="/tags" className={pathname === "/tags" ? "active" : "normal"}>
                   Topics
                 </NavLink>
-              </NavItem>
+              </NavItem> */}
               <NavItem>
                 <NavLink href="/about" className={pathname === "/about" ? "active" : "normal"}>
                   About

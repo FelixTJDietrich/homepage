@@ -28,20 +28,26 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-        <Container className="container" id="content">
-          <Row>
-            <Col md="8">
-            {children}
-            </Col>
-            <Col md="4">
-              <Sidebar/>
-            </Col>
-          </Row>
-        </Container>
-        <Footer />
-      </>
+      <body className="d-flex flex-column min-vh-100">
+        <header>
+          <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+        </header>
+        <content>
+          <Container className="container" id="content">
+            <Row>
+              <Col md="8">
+              {children}
+              </Col>
+              <Col md="4">
+                <Sidebar/>
+              </Col>
+            </Row>
+          </Container>
+        </content>
+        <footer className="mt-auto">
+          <Footer />
+        </footer>
+      </body>
     )}
   />
 )
