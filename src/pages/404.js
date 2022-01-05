@@ -5,8 +5,9 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const NotFoundPage = () => (
-  <Layout pageTitle={"Oops, something went wrong..."}>
+  <Layout>
     <Seo title="404: Not found" />
+    <h1>Oops, something went wrong...</h1>
     <Link className="btn btn-primary text-uppercase" to={"/"}>
       Go home
     </Link>

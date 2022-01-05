@@ -15,7 +15,7 @@ exports.onCreateNode = ({ node, actions }) => {
 }
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
 
   const templates = {
     singlePost: path.resolve("src/templates/single-post.js"),
@@ -87,7 +87,7 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
 
-    const postsPerPage = 2
+    const postsPerPage = 10
     const numberOfPages = Math.ceil(posts.length / postsPerPage)
 
     Array.from({ length : numberOfPages }).forEach((_, index) => {
@@ -106,6 +106,13 @@ exports.createPages = ({ actions, graphql }) => {
             numberOfPages,
           },
       })
+    })
+
+    createRedirect({
+      fromPath: "/page/1",
+      toPath: "/",
+      redirectInBrowser: true,
+      isPermanent: true,
     })
   })
 }

@@ -19,11 +19,13 @@ import {
 } from '@fortawesome/free-brands-svg-icons'
 
 import author from "../util/author";
+import { Location } from '@reach/router';
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
 
+    this.location = this.props.location
     this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false
@@ -37,6 +39,7 @@ class Header extends React.Component {
   }
 
   render() {
+    const { pathname } = this.location
     return (
       <div>
         <Navbar fixed="top" light expand="sm" container="sm">
@@ -45,13 +48,19 @@ class Header extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ms-auto" navbar>
               <NavItem>
-                <NavLink href="/">Blog</NavLink>
+                <NavLink href="/" className={pathname === "/" ? "active" : "normal"}>
+                  Blog
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/tags">Topics</NavLink>
+                <NavLink href="/tags" className={pathname === "/tags" ? "active" : "normal"}>
+                  Topics
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/about">About</NavLink>
+                <NavLink href="/about" className={pathname === "/about" ? "active" : "normal"}>
+                  About
+                </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href={"https://www.twitter.com/" + author.handles.twitter} target="_blank" rel="noopener noreferrer" className="twitter">
@@ -84,4 +93,10 @@ Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+const HeaderInsertLocation = props => (
+  <Location>
+    {locationProps => <Header {...locationProps} {...props} />}
+  </Location>
+);
+
+export default HeaderInsertLocation

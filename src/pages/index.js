@@ -7,16 +7,16 @@ import Post from "../components/Post"
 import PaginationLinks from "../components/PaginationLinks"
 
 const IndexPage = () => {
-  const postPerPage = 2
+  const postsPerPage = 10
   let numberOfPages 
 
   return (
-    <Layout pageTitle="Blog">
+    <Layout>
       <Seo title="Blog" />
       <StaticQuery 
         query={indexQuery} 
         render={data => {
-          numberOfPages = Math.ceil(data.allMarkdownRemark.totalCount / postPerPage)
+          numberOfPages = Math.ceil(data.allMarkdownRemark.totalCount / postsPerPage)
           console.log(numberOfPages)
           return (
             <div>
@@ -44,7 +44,7 @@ const indexQuery = graphql`
   query indexQuery {
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: 2
+      limit: 10
     ) {
       totalCount
       edges {
