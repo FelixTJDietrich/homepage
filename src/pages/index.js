@@ -11,8 +11,8 @@ const IndexPage = () => {
   let numberOfPages 
 
   return (
-    <Layout pageTitle="Home page">
-      <Seo title="Home" />
+    <Layout pageTitle="Blog">
+      <Seo title="Blog" />
       <StaticQuery 
         query={indexQuery} 
         render={data => {
