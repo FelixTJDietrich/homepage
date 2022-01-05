@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { graphql, Link } from "gatsby";
-import { Card, CardBody, CardSubtitle, Badge } from "reactstrap";
+import { Card, CardBody, CardSubtitle, CardTitle, Badge } from "reactstrap";
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { slugify } from "../util/utilityFunctions";
 
@@ -30,13 +30,16 @@ const SinglePost = ({ data, pageContext }) => {
   return (
     <Layout>
       <Seo title={post.title}/>
-      <h1>{post.title}</h1>
       <Card>
-        <GatsbyImage className="card-image-top" image={getImage(post.image)} style={{ width: "100%" }} imgStyle={{ objectFit: "cover" }}/>
+        <GatsbyImage className="card-image-top rounded-top" image={getImage(post.image)} style={{ width: "100%" }} imgStyle={{ objectFit: "cover" }}/>
         <CardBody>
-          <CardSubtitle>
-            <span className="text-info">{post.date}</span>
+          <CardSubtitle
+            className="mb-2 text-muted"
+            tag="h6"
+          >
+            {post.date}
           </CardSubtitle>
+          <CardTitle tag="h5">{post.title}</CardTitle>
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
           <ul className="post-tags">
             {post.tags.map(tag => (

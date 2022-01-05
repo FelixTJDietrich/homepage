@@ -7,19 +7,25 @@ import { slugify } from "../util/utilityFunctions"
 const Post = ({ title, slug, date, body, tags, image }) => {
   return (
     <Card>
-
       <Link to={`/${slug}`}>
         <GatsbyImage className="card-image-top rounded-top" image={getImage(image)} style={{ width: "100%" }} imgStyle={{ objectFit: "cover" }}/>
       </Link>
       <CardBody>
-        <CardTitle><Link to={`/${slug}`}>{title}</Link></CardTitle>
-        <CardSubtitle className="publish-date">{date}</CardSubtitle>
+        <CardSubtitle
+          className="mb-2 text-muted"
+          tag="h6"
+        >
+          {date}
+        </CardSubtitle>
+        <CardTitle tag="h5">
+          <Link to={`/${slug}`} style={{color: "rgb(40, 40, 40)"}}>{title}</Link>
+        </CardTitle>
         <CardText>{body}</CardText>
         <ul className="post-tags">
           {tags.map(tag => (
             <li key={tag}>
               <Link to={`/tag/${slugify(tag)}`}>
-                <Badge color="primary" className="text-uppercase">{tag}</Badge>
+                <Badge color="primary" className="btn text-uppercase">{tag}</Badge>
               </Link>
             </li>
           ))}

@@ -2,15 +2,30 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
 import Post from "../components/Post"
+import { Card, CardBody, CardSubtitle, CardTitle, CardHeader } from "reactstrap";
 
 const TagPosts = ({ data, pageContext }) => {
   const { tag } = pageContext
   const { totalCount } = data.allMarkdownRemark
-  const pageHeader = `${totalCount} post${totalCount === 1 ? '' : 's'} tagged with "${tag}"`
 
   return (
     <Layout>
-      <h1>{pageHeader}</h1>
+      <Card className="mb-3">
+        <CardHeader>
+          Info
+        </CardHeader>
+        <CardBody>
+          <CardTitle tag="h5">
+            {`Posts tagged with "${tag}"`}
+          </CardTitle>
+          <CardSubtitle
+            className="mb-2 text-muted"
+            tag="h6"
+          >
+            {`${totalCount} post${totalCount === 1 ? '' : 's'}`}
+          </CardSubtitle>
+        </CardBody>
+      </Card>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Post 
           key={node.id}

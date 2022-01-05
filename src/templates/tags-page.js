@@ -1,5 +1,5 @@
 import React from "react";
-import { Badge, Button } from "reactstrap";
+import { Badge } from "reactstrap";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { slugify } from "../util/utilityFunctions";
