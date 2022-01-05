@@ -7,7 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
   faTwitter, 
   faInstagram, 
-  faGithub, 
+  faGithub,
+  faLinkedin, 
 } from '@fortawesome/free-brands-svg-icons'
 
 import { 
@@ -64,6 +65,11 @@ const Sidebar = () => (
             <li>
               <Link href={"https://www.github.com/" + author.handles.github} target="_blank" rel="noopener noreferrer" className="github">
                 <FontAwesomeIcon icon={faGithub} size="lg" fixedWidth/>GitHub
+              </Link>
+            </li>
+            <li>
+              <Link href={"https://www.linkedin.com/in/" + author.handles.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin">
+                <FontAwesomeIcon icon={faLinkedin} size="lg" fixedWidth/>LinkedIn
               </Link>
             </li>
           </ul>

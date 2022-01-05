@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
   faTwitter, 
   faInstagram, 
-  faGithub, 
+  faGithub,
+  faLinkedin, 
 } from '@fortawesome/free-brands-svg-icons'
 
 import author from "../util/author";
@@ -30,6 +31,11 @@ const Footer = () => (
         <li>
           <a href={"https://www.github.com/" + author.handles.github} target="_blank" rel="noopener noreferrer" className="github">
             <FontAwesomeIcon icon={faGithub} size="2x" fixedWidth/>
+          </a>
+        </li>
+        <li>
+          <a href={"https://www.linkedin.com/in/" + author.handles.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin">
+            <FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth/>
           </a>
         </li>
       </ul>

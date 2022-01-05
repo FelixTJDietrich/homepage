@@ -10,6 +10,7 @@ const author = {
     twitter: "FelixTJDietrich",
     instagram: "felixtj.dietrich",
     github: "FelixTJDietrich",
+    linkedin: "felix-t-j-dietrich-8406a522a"
   }
 }
 
