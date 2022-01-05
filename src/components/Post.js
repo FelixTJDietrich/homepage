@@ -7,12 +7,13 @@ import { slugify } from "../util/utilityFunctions"
 const Post = ({ title, slug, date, body, tags, image }) => {
   return (
     <Card>
+
       <Link to={`/${slug}`}>
-        <GatsbyImage className="card-image-top" image={getImage(image)} style={{ width: "100%" }} imgStyle={{ objectFit: "cover" }}/>
+        <GatsbyImage className="card-image-top rounded-top" image={getImage(image)} style={{ width: "100%" }} imgStyle={{ objectFit: "cover" }}/>
       </Link>
       <CardBody>
         <CardTitle><Link to={`/${slug}`}>{title}</Link></CardTitle>
-        <CardSubtitle><span className="test-info">{date}</span></CardSubtitle>
+        <CardSubtitle className="publish-date">{date}</CardSubtitle>
         <CardText>{body}</CardText>
         <ul className="post-tags">
           {tags.map(tag => (
