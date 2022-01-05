@@ -16,7 +16,7 @@ import author from "../util/author";
 const AboutPage = () => (
   <Layout>
     <Seo title="About" />
-    <Card>
+    <Card className="mb-2">
       <CardBody>
         <CardTitle tag="h3">
           Hey 👋 I'm Felix T.J. Dietrich 
@@ -32,7 +32,7 @@ const AboutPage = () => (
         </CardText>
       </CardBody>
     </Card>
-    <Card>
+    <Card className="mb-2">
       <CardBody>
         <CardTitle tag="h5">
           How I like being called
@@ -45,7 +45,7 @@ const AboutPage = () => (
         </CardText>
       </CardBody>
     </Card>
-    <Card>
+    <Card className="mb-2">
       <CardBody>
         <CardTitle tag="h5">
           Interests or things I care about
@@ -61,7 +61,7 @@ const AboutPage = () => (
         </CardText>
       </CardBody>
     </Card>
-    <Card>
+    <Card className="mb-2">
       <CardBody>
         <CardTitle tag="h5">
           Why this blog?
