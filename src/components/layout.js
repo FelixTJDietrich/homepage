@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { graphql, StaticQuery } from "gatsby"
 
 import Sidebar from "../components/Sidebar"
-import { Row, Col } from "reactstrap"
+import { Container, Row, Col } from "reactstrap"
 
 import Header from "./header"
 import Footer from "./Footer"
@@ -30,17 +30,17 @@ const Layout = ({ children, pageTitle }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-        <div className="container" id="content">
-          <h1>{pageTitle}</h1>
+        <Container className="container" id="content">
           <Row>
             <Col md="8">
+            <h1>{pageTitle}</h1>
             {children}
             </Col>
             <Col md="4">
               <Sidebar/>
             </Col>
           </Row>
-        </div>
+        </Container>
         <Footer />
       </>
     )}
