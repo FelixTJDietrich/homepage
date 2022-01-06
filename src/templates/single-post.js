@@ -34,7 +34,14 @@ const SinglePost = ({ data, pageContext }) => {
     <Layout>
       <Seo title={post.title}/>
       <Card>
-        <GatsbyImage className="card-image-top rounded-top" image={getImage(post.image)} style={{ width: "100%" }} imgStyle={{ objectFit: "cover" }}/>
+        {post.image && 
+          <GatsbyImage 
+            className="card-image-top rounded-top" 
+            image={getImage(post.image)} 
+            style={{ width: "100%" }} 
+            imgStyle={{ objectFit: "cover" }}
+          />
+        }
         <CardBody>
           <CardSubtitle
             className="mb-2 text-muted"

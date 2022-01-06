@@ -14,6 +14,21 @@ exports.onCreateNode = ({ node, actions }) => {
   }
 }
 
+exports.createSchemaCustomization = ({ actions, schema }) => {
+  const { createTypes } = actions;
+
+  const typeDefs = [
+      `type MarkdownRemark implements Node {
+          frontmatter: Frontmatter
+      }`,
+      `type Frontmatter @infer {
+          image: File @fileByRelativePath,
+      }`,
+  ];
+
+  createTypes(typeDefs);
+};
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage, createRedirect } = actions
 

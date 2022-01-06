@@ -7,9 +7,9 @@ import { slugify } from "../util/utilityFunctions"
 const Post = ({ title, slug, date, body, tags, image }) => {
   return (
     <Card>
-      <Link to={`/${slug}`}>
+      {image && <Link to={`/${slug}`}>
         <GatsbyImage className="card-image-top rounded-top" image={getImage(image)} style={{ width: "100%" }} imgStyle={{ objectFit: "cover" }}/>
-      </Link>
+      </Link>}
       <CardBody>
         <CardSubtitle
           className="mb-2 text-muted"
