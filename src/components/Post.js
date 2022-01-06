@@ -21,7 +21,7 @@ const Post = ({ title, slug, date, body, tags, image }) => {
           <Link to={`/${slug}`} style={{color: "rgb(40, 40, 40)"}}>{title}</Link>
         </CardTitle>
         <CardText>{body}</CardText>
-        <ul className="post-tags">
+        <ul className="post-tags mb-0">
           {tags.map(tag => (
             <li key={tag}>
               <Link to={`/tag/${slugify(tag)}`}>

@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { graphql, Link } from "gatsby";
-import { Card, CardBody, CardSubtitle, CardTitle, Badge } from "reactstrap";
+import { Card, CardBody, CardSubtitle, CardTitle, CardFooter, Badge } from "reactstrap";
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { slugify } from "../util/utilityFunctions";
 
@@ -10,6 +10,7 @@ import author from "../util/author";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { 
   faFacebookF,
+  faGithub,
   faLinkedin,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
@@ -18,6 +19,7 @@ import { DiscussionEmbed } from "disqus-react";
 
 const SinglePost = ({ data, pageContext }) => {
   const post = data.markdownRemark.frontmatter
+  const file = data.markdownRemark.parent
   const baseUrl = "https://felixdietrich.com/"
 
   const disqusShortname = "felixtjdietrich"
@@ -26,6 +28,7 @@ const SinglePost = ({ data, pageContext }) => {
     title: post.title,
     url: baseUrl + pageContext.slug,
   }
+
 
   return (
     <Layout>
@@ -41,7 +44,7 @@ const SinglePost = ({ data, pageContext }) => {
           </CardSubtitle>
           <CardTitle tag="h5">{post.title}</CardTitle>
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
-          <ul className="post-tags">
+          <ul className="post-tags mb-0">
             {post.tags.map(tag => (
               <li key={tag}>
                 <Link to={`/tag/${slugify(tag)}`}>
@@ -53,7 +56,21 @@ const SinglePost = ({ data, pageContext }) => {
             ))}
           </ul>
         </CardBody>
+        <CardFooter className="text-muted">
+          <small>
+            Updated  {file.modifiedTime},&nbsp;
+            <Link 
+              href={`https://github.com/FelixTJDietrich/homepage/commits/main/${file.sourceInstanceName}/${file.relativePath}`}
+              className="github"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              view changes on GitHub <FontAwesomeIcon icon={faGithub} fixedWidth/>
+            </Link>
+          </small>
+          </CardFooter>
       </Card>
+
       <h3 className="text-center">
         Share this post
       </h3>
@@ -63,7 +80,7 @@ const SinglePost = ({ data, pageContext }) => {
             <a 
               href={"https://www.facebook.com/sharer/sharer.php?u=" + baseUrl + pageContext.slug} 
               className="facebook" 
-              target="_black" 
+              target="_blank" 
               rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faFacebookF} size="2x" fixedWidth/>
@@ -81,7 +98,7 @@ const SinglePost = ({ data, pageContext }) => {
                 author.handles.twitter
               } 
               className="twitter" 
-              target="_black" 
+              target="_blank" 
               rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faTwitter} size="2x" fixedWidth/>
@@ -94,7 +111,7 @@ const SinglePost = ({ data, pageContext }) => {
                 baseUrl + pageContext.slug
               } 
               className="linkedin" 
-              target="_black" 
+              target="_blank" 
               rel="noopener noreferrer"
             >
               <FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth/>
@@ -120,6 +137,13 @@ export const postQuery = graphql`
           childImageSharp {
             gatsbyImageData(height: 200)
           }
+        }
+      }
+      parent {
+        ... on File {
+          relativePath
+          sourceInstanceName
+          modifiedTime(formatString: "MMM Do YYYY")
         }
       }
     }
