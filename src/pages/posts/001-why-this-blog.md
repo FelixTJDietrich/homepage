@@ -1,6 +1,7 @@
 ---
-title: "Why this blog?"
+title: "Why I want to start this blog"
 date: 2022-01-05 15:40:00
+slug: "blog"
 tags:
   - Personal
   - Blogging

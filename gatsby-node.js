@@ -2,18 +2,6 @@ const { slugify } = require("./src/util/utilityFunctions")
 const path = require("path")
 const _ = require("lodash")
 
-exports.onCreateNode = ({ node, actions }) => {
-  const { createNodeField } = actions
-  if (node.internal.type === "MarkdownRemark") {
-    const slugFromTitle = slugify(node.frontmatter.title)
-    createNodeField({
-      node,
-      name: "slug",
-      value: slugFromTitle,
-    })
-  }
-}
-
 exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions;
 
@@ -22,6 +10,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
           frontmatter: Frontmatter
       }`,
       `type Frontmatter @infer {
+          slug: String!
           image: File @fileByRelativePath,
       }`,
   ];
@@ -45,10 +34,8 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             frontmatter {
-              tags
-            }
-            fields {
               slug
+              tags
             }
           }
         }
@@ -61,10 +48,10 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach(({ node }) => {
       createPage({
-        path: node.fields.slug,
+        path: `post/${node.frontmatter.slug}`,
         component: templates.singlePost,
         context: { 
-          slug: node.fields.slug
+          slug: node.frontmatter.slug
         },
       })
     })

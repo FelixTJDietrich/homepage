@@ -133,7 +133,7 @@ const SinglePost = ({ data, pageContext }) => {
 
 export const postQuery = graphql`
   query blogPostBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       html
       frontmatter {

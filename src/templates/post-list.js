@@ -15,7 +15,7 @@ const PostList = ({ data, pageContext}) => {
           key={node.id}
           title={node.frontmatter.title}
           date={node.frontmatter.date}
-          slug={node.fields.slug}
+          slug={`post/${node.frontmatter.slug}`}
           body={node.excerpt}
           tags={node.frontmatter.tags}
           image={node.frontmatter.image}
@@ -39,15 +39,13 @@ export const postListQuery = graphql`
           frontmatter {
             title
             date(formatString: "MMM Do YYYY")
+            slug
             tags
             image {
               childImageSharp {
                 gatsbyImageData(height: 200)
               }
             }
-          }
-          fields {
-            slug
           }
           excerpt
         }
