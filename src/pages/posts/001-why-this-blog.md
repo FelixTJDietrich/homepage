@@ -1,10 +1,8 @@
 ---
 title: "Why this blog?"
 date: 2022-01-05 15:40:00
-image: "../../images/javascript.jpg"
 tags:
   - Personal
-  - Meta
   - Blogging
 ---
 
