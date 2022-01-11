@@ -11,13 +11,10 @@ const Post = ({ title, slug, date, body, tags, image }) => {
         <GatsbyImage className="card-image-top rounded-top" image={getImage(image)} style={{ width: "100%" }} imgStyle={{ objectFit: "cover" }}/>
       </Link>}
       <CardBody>
-        <CardSubtitle
-          className="mb-2 text-muted"
-          tag="h6"
-        >
+        <CardSubtitle className="mb-1 text-muted">
           {date}
         </CardSubtitle>
-        <CardTitle tag="h5">
+        <CardTitle tag="h5" className="mb-1">
           <Link to={`/${slug}`} style={{color: "rgb(40, 40, 40)"}}>{title}</Link>
         </CardTitle>
         <CardText>{body}</CardText>

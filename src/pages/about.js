@@ -21,10 +21,7 @@ const AboutPage = () => (
         <CardTitle tag="h3">
           Hey 👋 I'm Felix T.J. Dietrich 
         </CardTitle>
-        <CardSubtitle
-          className="mb-2 text-muted"
-          tag="h6"
-        >
+        <CardSubtitle className="mb-1 text-muted">
           M.Sc. Informatics student at Technical University of Munich. 
         </CardSubtitle>
         <CardText>
@@ -50,10 +47,7 @@ const AboutPage = () => (
         <CardTitle tag="h5">
           Interests or things I care about
         </CardTitle>
-        <CardSubtitle
-          className="mb-2 text-muted"
-          tag="h6"
-        >
+        <CardSubtitle className="mb-1 text-muted">
           This list is neither exhaustive nor ordered. My interests change and fluctuate constantly.
         </CardSubtitle>
         <CardText>

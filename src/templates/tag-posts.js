@@ -15,13 +15,10 @@ const TagPosts = ({ data, pageContext }) => {
           Info
         </CardHeader>
         <CardBody>
-          <CardTitle tag="h5">
+          <CardTitle tag="h5" className="mb-1 info-title">
             {`Posts tagged with "${tag}"`}
           </CardTitle>
-          <CardSubtitle
-            className="mb-2 text-muted"
-            tag="h6"
-          >
+          <CardSubtitle className="mb-1 text-muted">
             {`${totalCount} post${totalCount === 1 ? '' : 's'}`}
           </CardSubtitle>
         </CardBody>
