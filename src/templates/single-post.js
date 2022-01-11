@@ -49,7 +49,7 @@ const SinglePost = ({ data, pageContext }) => {
           >
             {post.date}
           </CardSubtitle>
-          <CardTitle tag="h5">{post.title}</CardTitle>
+          <CardTitle tag="h1">{post.title}</CardTitle>
           <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
           <ul className="post-tags mb-0">
             {post.tags.map(tag => (
