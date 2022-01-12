@@ -12,7 +12,7 @@ Self-improvement is the main reason for starting this blog. I’m trying to impr
 
 For most of my life so far I have lived a very reclusive life. As a teenager, I thought of myself as just an observer paying witness to the world events without disturbing them until I die. An alien amongst man. I barely talked to people and shared almost nothing with no one. My mind was my own, a fort only there for my own amusement, where nobody is allowed to enter. In high school my nickname was "Superman" because people noticed how low-key I tried to be while probably leading a secret superhero life.
 
-A lot of things changed for the better since then. I'm no longer overprotective of my mind. Others are allowed read- and write-access to it. I feel in command of access control to it. I have become a more social person now, wanting to connect with more and more people.
+A lot of things changed for the better since then. I'm no longer overprotective of my mind. Others are allowed read- and write-access to it. I feel more in command of its access control. I have become a more social person now, wanting to connect with more and more people.
 
 Starting a blog and leaving traces on the internet would have been unimaginable by my younger self, out of fear, shame, anxiety, and indifference. I like challenging myself and I hope that this blog helps me improve in many areas of life.
 
@@ -38,7 +38,7 @@ Perfectionism has its perks but often gets in the way of life. It made me a very
 
 Mistakes cause me a lot of suffering. Making a public mistake and being seen as anything other than perfect led me to avoid life. This avoidance caused inexperienced, which in turn led to avoidance in a negative feedback loop. You can't be perfect from the get-go. Practice makes perfect, and failure leads to learning.
 
-Perfectionism gets in the way of learning and accomplishing. With a blog I’d become more active and comfortable with failing and making mistakes publicly.
+Perfectionism gets in the way of learning and accomplishing. With a blog I’d become more comfortable with failing and making mistakes publicly.
 
 ### 2. Reducing shame
 
@@ -72,7 +72,7 @@ Last year felt like I was learning exponentially more things because of the conn
 
 There are obviously a lot more reasons I could list such as: improving my writing, building a brand, documenting life, keeping busy, helping others, learning self-expression, getting thoughts straight, and so on...
 
-A lot of reasons and benefits will probably reveal themselves in the future. I can not fully asses the hidden value this blog will bring over time. I have started placing a lot of weight on the unknown and only time will tell.
+A lot of reasons and benefits will reveal themselves in the future. I can not fully asses the hidden value this blog. I have started placing a lot of weight on the unknown and only time will tell its value to me.
 
 ## Conclusion
 
