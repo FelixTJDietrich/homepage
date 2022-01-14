@@ -22,7 +22,7 @@ const AboutPage = () => (
           Hey 👋 I'm Felix T.J. Dietrich 
         </CardTitle>
         <CardSubtitle className="mb-1 text-muted">
-          M.Sc. Informatics student at Technical University of Munich. 
+        Amateur at life. M.Sc. Informatics student at Technical University of Munich. 
         </CardSubtitle>
         <CardText>
           Welcome to my website where I try to share my thoughts, interests, and things I care about. 
