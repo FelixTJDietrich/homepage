@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Felix T.J. Dietrich`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    description: `A website where Felix T.J. Dietrich shows his work.`,
+    author: `@FelixTJDietrich`,
+    siteUrl: `https://felixdietrich.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -29,15 +29,19 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Felix T.J. Dietrich's Website`,
+        short_name: `Felix T.J. Dietrich`,
+        description: `A website where Felix T.J. Dietrich shows his work.`,
+        lang: `en`,
         start_url: `/`,
-        background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        background_color: `#FFFFFF`,
+        theme_color: `#FFFFFF`,
+        display: `browser`,
+        icon: `src/images/author.jpg`,
+        icon_options: {
+          purpose: `any maskable`,
+        },
+        theme_color_in_head: false,
       },
     },
     {
@@ -57,8 +61,6 @@ module.exports = {
         ]
       }
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
