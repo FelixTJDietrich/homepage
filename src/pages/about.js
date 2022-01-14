@@ -20,7 +20,7 @@ function AboutPage() {
       <Card className="mb-2">
         <CardBody>
           <CardTitle tag="h3">
-            Hey 👋 I&apos;m Felix T.J. Dietrich
+            Hi! 👋 I&apos;m Felix, also called T.J.
           </CardTitle>
           <CardSubtitle className="mb-1 text-muted">
             {author.bio}
