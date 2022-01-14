@@ -1,17 +1,17 @@
-import React from "react";
-import Layout from "../components/layout"
-import Post from "../components/Post";
-import PaginationLinks from "../components/PaginationLinks"
-import { graphql } from "gatsby";
+import React from 'react';
+import { graphql } from 'gatsby';
+import Layout from '../components/layout';
+import Post from '../components/Post';
+import PaginationLinks from '../components/PaginationLinks';
 
-const PostList = ({ data, pageContext}) => {
-  const posts = data.allMarkdownRemark.edges
-  const { currentPage, numberOfPages } = pageContext
+function PostList({ data, pageContext }) {
+  const posts = data.allMarkdownRemark.edges;
+  const { currentPage, numberOfPages } = pageContext;
 
   return (
     <Layout>
       {posts.map(({ node }) => (
-        <Post 
+        <Post
           key={node.id}
           title={node.frontmatter.title}
           date={node.frontmatter.date}
@@ -21,9 +21,9 @@ const PostList = ({ data, pageContext}) => {
           image={node.frontmatter.image}
         />
       ))}
-      <PaginationLinks currentPage={currentPage} numberOfPages={numberOfPages}/>
+      <PaginationLinks currentPage={currentPage} numberOfPages={numberOfPages} />
     </Layout>
-  )
+  );
 }
 
 export const postListQuery = graphql`
@@ -52,7 +52,6 @@ export const postListQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default PostList
-
+export default PostList;

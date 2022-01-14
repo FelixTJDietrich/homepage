@@ -1,7 +1,7 @@
 ---
 title: "Why I want to start a blog"
 date: 2022-01-11 18:35:00
-slug: "blog"
+slug: "about-this-blog"
 image: "./blog.jpg"
 tags:
   - Personal

@@ -1,5 +1,5 @@
-import * as React from "react"
-import PropTypes from "prop-types"
+import * as React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   Collapse,
@@ -9,46 +9,49 @@ import {
   NavbarToggler,
   NavItem,
   NavLink,
-} from "reactstrap";
+} from 'reactstrap';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
-  faTwitter, 
-  faInstagram, 
-  faGithub, 
-} from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faTwitter,
+  faInstagram,
+  faGithub,
+} from '@fortawesome/free-brands-svg-icons';
 
-import author from "../util/author";
 import { Location } from '@reach/router';
+import author from '../util/author';
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
 
-    this.location = this.props.location
+    const { location, siteTitle } = this.props;
+    this.location = location;
+    this.siteTitle = siteTitle;
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
     };
   }
 
   toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
+    this.setState((prevState) => ({
+      isOpen: !prevState.isOpen,
+    }));
   }
 
   render() {
-    const { pathname } = this.location
+    const { pathname } = this.location;
+    const { isOpen } = this.state;
     return (
       <div>
         <Navbar fixed="top" light expand="sm" container="sm">
-          <NavbarBrand href="/">{this.props.siteTitle}</NavbarBrand>
+          <NavbarBrand href="/">{this.siteTitle}</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
+          <Collapse isOpen={isOpen} navbar>
             <Nav className="ms-auto" navbar>
               <NavItem>
-                <NavLink href="/" className={pathname === "/" ? "active" : "normal"}>
+                <NavLink href="/" className={pathname === '/' ? 'active' : 'normal'}>
                   Blog
                 </NavLink>
               </NavItem>
@@ -58,23 +61,23 @@ class Header extends React.Component {
                 </NavLink>
               </NavItem> */}
               <NavItem>
-                <NavLink href="/about" className={pathname === "/about" ? "active" : "normal"}>
+                <NavLink href="/about" className={pathname === '/about' ? 'active' : 'normal'}>
                   About
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href={"https://www.twitter.com/" + author.handles.twitter} target="_blank" rel="noopener noreferrer" className="twitter">
-                  <FontAwesomeIcon icon={faTwitter} size="lg" fixedWidth/>
+                <NavLink href={`https://www.twitter.com/${author.handles.twitter}`} target="_blank" rel="noopener noreferrer" className="twitter">
+                  <FontAwesomeIcon icon={faTwitter} size="lg" fixedWidth />
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href={"https://www.instagram.com/" + author.handles.instagram} target="_blank" rel="noopener noreferrer" className="instagram">
-                  <FontAwesomeIcon icon={faInstagram} size="lg" fixedWidth/>
+                <NavLink href={`https://www.instagram.com/${author.handles.instagram}`} target="_blank" rel="noopener noreferrer" className="instagram">
+                  <FontAwesomeIcon icon={faInstagram} size="lg" fixedWidth />
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href={"https://www.github.com/" + author.handles.github} target="_blank" rel="noopener noreferrer" className="github">
-                  <FontAwesomeIcon icon={faGithub} size="lg" fixedWidth/>
+                <NavLink href={`https://www.github.com/${author.handles.github}`} target="_blank" rel="noopener noreferrer" className="github">
+                  <FontAwesomeIcon icon={faGithub} size="lg" fixedWidth />
                 </NavLink>
               </NavItem>
             </Nav>
@@ -87,16 +90,18 @@ class Header extends React.Component {
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+};
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: '',
+};
+
+function HeaderInsertLocation(props) {
+  return (
+    <Location>
+      {(locationProps) => <Header {...locationProps} {...props} />}
+    </Location>
+  );
 }
 
-const HeaderInsertLocation = props => (
-  <Location>
-    {locationProps => <Header {...locationProps} {...props} />}
-  </Location>
-);
-
-export default HeaderInsertLocation
+export default HeaderInsertLocation;

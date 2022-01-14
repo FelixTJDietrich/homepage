@@ -1,12 +1,14 @@
-import React from "react";
-import { graphql } from "gatsby";
-import Layout from "../components/layout";
-import Post from "../components/Post"
-import { Card, CardBody, CardSubtitle, CardTitle, CardHeader } from "reactstrap";
+import React from 'react';
+import { graphql } from 'gatsby';
+import {
+  Card, CardBody, CardSubtitle, CardTitle, CardHeader,
+} from 'reactstrap';
+import Layout from '../components/layout';
+import Post from '../components/Post';
 
-const TagPosts = ({ data, pageContext }) => {
-  const { tag } = pageContext
-  const { totalCount } = data.allMarkdownRemark
+function TagPosts({ data, pageContext }) {
+  const { tag } = pageContext;
+  const { totalCount } = data.allMarkdownRemark;
 
   return (
     <Layout>
@@ -24,7 +26,7 @@ const TagPosts = ({ data, pageContext }) => {
         </CardBody>
       </Card>
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <Post 
+        <Post
           key={node.id}
           title={node.frontmatter.title}
           date={node.frontmatter.date}
@@ -32,10 +34,10 @@ const TagPosts = ({ data, pageContext }) => {
           body={node.excerpt}
           tags={node.frontmatter.tags}
           image={node.frontmatter.image}
-      />
+        />
       ))}
     </Layout>
-  )
+  );
 }
 
 export const tagQuery = graphql`
@@ -64,6 +66,6 @@ export const tagQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default TagPosts
+export default TagPosts;

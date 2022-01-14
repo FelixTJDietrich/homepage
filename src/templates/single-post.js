@@ -1,55 +1,58 @@
-import React from "react";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
-import { graphql, Link } from "gatsby";
-import { Card, CardBody, CardSubtitle, CardTitle, CardFooter, Badge } from "reactstrap";
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { slugify } from "../util/utilityFunctions";
+/* eslint-disable react/no-danger */
+import React from 'react';
+import { graphql, Link } from 'gatsby';
+import {
+  Card, CardBody, CardSubtitle, CardTitle, CardFooter, Badge,
+} from 'reactstrap';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
-import author from "../util/author";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
   faFacebookF,
   faGithub,
   faLinkedin,
   faTwitter,
-} from '@fortawesome/free-brands-svg-icons'
+} from '@fortawesome/free-brands-svg-icons';
 
-import { DiscussionEmbed } from "disqus-react";
+import { DiscussionEmbed } from 'disqus-react';
+import author from '../util/author';
+import { slugify } from '../util/utilityFunctions';
+import Seo from '../components/seo';
+import Layout from '../components/layout';
 
-const SinglePost = ({ data, pageContext }) => {
-  const post = data.markdownRemark.frontmatter
-  const file = data.markdownRemark.parent
-  const baseUrl = "https://felixdietrich.com/"
+function SinglePost({ data, pageContext }) {
+  const post = data.markdownRemark.frontmatter;
+  const file = data.markdownRemark.parent;
+  const baseUrl = 'https://felixdietrich.com/';
 
-  const disqusShortname = "felixtjdietrich"
+  const disqusShortname = 'felixtjdietrich';
   const disqusConfig = {
     identifier: data.markdownRemark.id,
     title: post.title,
     url: baseUrl + pageContext.slug,
-  }
-
+  };
 
   return (
     <Layout>
-      <Seo title={post.title}/>
+      <Seo title={post.title} />
       <Card>
-        {post.image && 
-          <GatsbyImage 
-            className="card-image-top rounded-top" 
-            image={getImage(post.image)} 
-            style={{ width: "100%" }} 
-            imgStyle={{ objectFit: "cover" }}
+        {post.image
+          && (
+          <GatsbyImage
+            className="card-image-top rounded-top"
+            image={getImage(post.image)}
+            style={{ width: '100%' }}
+            imgStyle={{ objectFit: 'cover' }}
           />
-        }
+          )}
         <CardBody>
           <CardSubtitle className="mb-1 text-muted">
             {post.date}
           </CardSubtitle>
           <CardTitle tag="h1" className="mb-1">{post.title}</CardTitle>
-          <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}></div>
+          <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
           <ul className="post-tags mb-0">
-            {post.tags.map(tag => (
+            {post.tags.map((tag) => (
               <li key={tag}>
                 <Link to={`/tag/${slugify(tag)}`}>
                   <Badge color="primary">
@@ -62,17 +65,22 @@ const SinglePost = ({ data, pageContext }) => {
         </CardBody>
         <CardFooter className="text-muted">
           <small>
-            Updated  {file.modifiedTime},&nbsp;
-            <Link 
+            Updated
+            {' '}
+            {file.modifiedTime}
+            ,&nbsp;
+            <Link
               href={`https://github.com/FelixTJDietrich/homepage/commits/main/${file.sourceInstanceName}/${file.relativePath}`}
               className="github"
-              target="_blank" 
+              target="_blank"
               rel="noopener noreferrer"
             >
-              view changes on GitHub <FontAwesomeIcon icon={faGithub} fixedWidth/>
+              view changes on GitHub
+              {' '}
+              <FontAwesomeIcon icon={faGithub} fixedWidth />
             </Link>
           </small>
-          </CardFooter>
+        </CardFooter>
       </Card>
 
       <h3 className="text-center">
@@ -81,51 +89,51 @@ const SinglePost = ({ data, pageContext }) => {
       <div className="text-center social-share-links">
         <ul>
           <li>
-            <a 
-              href={"https://www.facebook.com/sharer/sharer.php?u=" + baseUrl + pageContext.slug} 
-              className="facebook" 
-              target="_blank" 
+            <a
+              href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}${pageContext.slug}`}
+              className="facebook"
+              target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faFacebookF} size="2x" fixedWidth/>
+              <FontAwesomeIcon icon={faFacebookF} size="2x" fixedWidth />
             </a>
           </li>
           <li>
-            <a 
+            <a
               href={
-                "https://www.twitter.com/share?url=" + 
-                baseUrl + 
-                pageContext.slug + 
-                "&text=" + 
-                post.title +
-                "&via=" +
-                author.handles.twitter
-              } 
-              className="twitter" 
-              target="_blank" 
+                `https://www.twitter.com/share?url=${
+                  baseUrl
+                }${pageContext.slug
+                }&text=${
+                  post.title
+                }&via=${
+                  author.handles.twitter}`
+              }
+              className="twitter"
+              target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faTwitter} size="2x" fixedWidth/>
+              <FontAwesomeIcon icon={faTwitter} size="2x" fixedWidth />
             </a>
           </li>
           <li>
-            <a 
+            <a
               href={
-                "https://www.linkedin.com/shareArticle?url=" + 
-                baseUrl + pageContext.slug
-              } 
-              className="linkedin" 
-              target="_blank" 
+                `https://www.linkedin.com/shareArticle?url=${
+                  baseUrl}${pageContext.slug}`
+              }
+              className="linkedin"
+              target="_blank"
               rel="noopener noreferrer"
             >
-              <FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth/>
+              <FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth />
             </a>
           </li>
         </ul>
       </div>
-      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig}/>
+      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
     </Layout>
-  )
+  );
 }
 
 export const postQuery = graphql`
@@ -152,6 +160,6 @@ export const postQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default SinglePost
+export default SinglePost;

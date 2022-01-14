@@ -1,33 +1,34 @@
-const { slugify } = require("./src/util/utilityFunctions")
-const path = require("path")
-const _ = require("lodash")
+const path = require('path');
+const _ = require('lodash');
+const { slugify } = require('./src/util/utilityFunctions');
 
-exports.createSchemaCustomization = ({ actions, schema }) => {
+exports.createSchemaCustomization = ({ actions }) => {
+  // Allow for an optional image in the blog's markdown frontmatter
   const { createTypes } = actions;
-
   const typeDefs = [
-      `type MarkdownRemark implements Node {
+    `type MarkdownRemark implements Node {
           frontmatter: Frontmatter
       }`,
-      `type Frontmatter @infer {
+    `type Frontmatter @infer {
           slug: String!
           image: File @fileByRelativePath,
       }`,
   ];
-
   createTypes(typeDefs);
 };
 
 exports.createPages = ({ actions, graphql }) => {
-  const { createPage, createRedirect } = actions
+  const { createPage, createRedirect } = actions;
 
+  // List of all template components for creating pages dynamically
   const templates = {
-    singlePost: path.resolve("src/templates/single-post.js"),
-    tagsPage: path.resolve("src/templates/tags-page.js"),
-    tagPosts: path.resolve("src/templates/tag-posts.js"),
-    postList: path.resolve("src/templates/post-list.js"),
-  }
-  
+    singlePost: path.resolve('src/templates/single-post.js'),
+    tagsPage: path.resolve('src/templates/tags-page.js'),
+    tagPosts: path.resolve('src/templates/tag-posts.js'),
+    postList: path.resolve('src/templates/post-list.js'),
+  };
+
+  // Querrying all posts for creating their corresponding pages dynamically
   return graphql(`
     {
       allMarkdownRemark {
@@ -41,80 +42,90 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(res => {
-    if (res.errors) return Promise.reject(red.errors)
+  `).then((res) => {
+    if (res.errors) {
+      return Promise.reject(res.errors);
+    }
 
-    const posts = res.data.allMarkdownRemark.edges
+    const posts = res.data.allMarkdownRemark.edges;
 
+    // Create `post/{slug}` pages for posts
     posts.forEach(({ node }) => {
       createPage({
         path: `post/${node.frontmatter.slug}`,
         component: templates.singlePost,
-        context: { 
-          slug: node.frontmatter.slug
+        context: {
+          slug: node.frontmatter.slug,
         },
-      })
-    })
+      });
+    });
 
-    let tags = []
-    _.each(posts, edge => {
-      if(_.get(edge, "node.frontmatter.tags")) {
-        tags = tags.concat(edge.node.frontmatter.tags)
+    // Accumulate tags of all posts
+    let tags = [];
+    _.each(posts, (edge) => {
+      if (_.get(edge, 'node.frontmatter.tags')) {
+        tags = tags.concat(edge.node.frontmatter.tags);
       }
-    })
+    });
 
-    let tagPostCounts = {}
-    tags.forEach(tag => {
-      tagPostCounts[tag] = (tagPostCounts[tag] || 0) + 1
-    })
+    const tagPostCounts = {};
+    tags.forEach((tag) => {
+      tagPostCounts[tag] = (tagPostCounts[tag] || 0) + 1;
+    });
 
-    tags = _.uniq(tags)
+    tags = _.uniq(tags);
 
+    // Create a page displaying all tags
     createPage({
       path: '/tags',
       component: templates.tagsPage,
-      context: { 
+      context: {
         tags,
         tagPostCounts,
       },
-    })
+    });
 
-    tags.forEach(tag => {
+    // Create a filtered by tag page for each tag
+    tags.forEach((tag) => {
       createPage({
         path: `/tag/${slugify(tag)}`,
         component: templates.tagPosts,
-        context: { 
+        context: {
           tag,
         },
-      })
-    })
+      });
+    });
 
-    const postsPerPage = 10
-    const numberOfPages = Math.ceil(posts.length / postsPerPage)
+    // Paginate all posts
+    const postsPerPage = 10;
+    const numberOfPages = Math.ceil(posts.length / postsPerPage);
 
-    Array.from({ length : numberOfPages }).forEach((_, index) => {
-      const isFirstPage = index === 0
-      const currentPage = index + 1
+    Array.from({ length: numberOfPages }).forEach((_, index) => {
+      const isFirstPage = index === 0;
+      const currentPage = index + 1;
 
-      if (isFirstPage) return
+      if (isFirstPage) return;
 
       createPage({
         path: `/page/${currentPage}`,
-          component: templates.postList,
-          context: { 
-            limit: postsPerPage,
-            skip: index * postsPerPage,
-            currentPage,
-            numberOfPages,
-          },
-      })
-    })
+        component: templates.postList,
+        context: {
+          limit: postsPerPage,
+          skip: index * postsPerPage,
+          currentPage,
+          numberOfPages,
+        },
+      });
+    });
 
+    // Redirect '/page/1' to the home page
     createRedirect({
-      fromPath: "/page/1",
-      toPath: "/",
+      fromPath: '/page/1',
+      toPath: '/',
       redirectInBrowser: true,
       isPermanent: true,
-    })
-  })
-}
+    });
+
+    return res;
+  });
+};

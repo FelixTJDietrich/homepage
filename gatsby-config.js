@@ -1,66 +1,66 @@
 module.exports = {
   siteMetadata: {
-    title: `Felix T.J. Dietrich`,
-    description: `A website where Felix T.J. Dietrich shows his work.`,
-    author: `@FelixTJDietrich`,
-    siteUrl: `https://felixdietrich.com/`,
+    title: 'Felix T.J. Dietrich',
+    description: 'A website where Felix T.J. Dietrich shows his work.',
+    author: '@FelixTJDietrich',
+    siteUrl: 'https://felixdietrich.com/',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-catch-links`,
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-image',
+    'gatsby-plugin-sass',
+    'gatsby-plugin-catch-links',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `src/images`,
+        name: 'src/images',
         path: `${__dirname}/src/images`,
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `src/pages`,
+        name: 'src/pages',
         path: `${__dirname}/src/pages`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `Felix T.J. Dietrich's Website`,
-        short_name: `Felix T.J. Dietrich`,
-        description: `A website where Felix T.J. Dietrich shows his work.`,
-        lang: `en`,
-        start_url: `/`,
-        background_color: `#FFFFFF`,
-        theme_color: `#FFFFFF`,
-        display: `browser`,
-        icon: `src/images/author.jpg`,
+        name: 'Felix T.J. Dietrich\'s Website',
+        short_name: 'Felix T.J. Dietrich',
+        description: 'A website where Felix T.J. Dietrich shows his work.',
+        lang: 'en',
+        start_url: '/',
+        background_color: '#FFFFFF',
+        theme_color: '#FFFFFF',
+        display: 'browser',
+        icon: 'src/images/author.jpg',
         icon_options: {
-          purpose: `any maskable`,
+          purpose: 'any maskable',
         },
         theme_color_in_head: false,
       },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          `gatsby-remark-relative-images`,
+          'gatsby-remark-relative-images',
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 800,
               linkImagesToOriginal: false,
               sizeByPixelDensity: true,
-              showCaptions: true
-            }
+              showCaptions: true,
+            },
           },
-        ]
-      }
+        ],
+      },
     },
-    `gatsby-plugin-offline`,
+    'gatsby-plugin-offline',
   ],
-}
+};
