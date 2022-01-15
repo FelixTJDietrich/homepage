@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { slugify } from '../util/utilityFunctions';
 
 function Post({
-  title, slug, date, body, tags, image,
+  title, slug, date, body, tags, image, timeToRead,
 }) {
   return (
     <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -13,7 +13,10 @@ function Post({
         <h3 className="mb-0">{title}</h3>
         <div className="mb-1 text-muted">{date}</div>
         <p className="card-text mb-2">{body}</p>
-        <Link to={`/${slug}`} className="stretched-link mb-2">Continue reading</Link>
+        <p className="mb-2 text-muted">
+          <Link to={`/${slug}`} className="stretched-link">Continue reading</Link>
+          {` · ${timeToRead} min read`}
+        </p>
         <ul className="post-tags mb-0">
           {tags.map((tag) => (
             <li key={tag}>

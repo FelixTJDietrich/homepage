@@ -28,6 +28,7 @@ const indexQuery = graphql`
             }
           }
           excerpt
+          timeToRead
         }
       }
     }
@@ -56,6 +57,7 @@ function IndexPage() {
                   body={node.excerpt}
                   tags={node.frontmatter.tags}
                   image={node.frontmatter.image}
+                  timeToRead={node.timeToRead}
                 />
               ))}
               <PaginationLinks currentPage={1} numberOfPages={numberOfPages} />

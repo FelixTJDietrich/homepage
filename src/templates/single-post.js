@@ -48,6 +48,7 @@ function SinglePost({ data, pageContext }) {
         <CardTitle tag="h1" className="mb-1">{post.title}</CardTitle>
         <CardSubtitle className="mb-2 text-muted">
           {post.date}
+          {` · ${data.markdownRemark.timeToRead} min read`}
         </CardSubtitle>
         <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
         <ul className="post-tags mb-2">
@@ -88,7 +89,7 @@ function SinglePost({ data, pageContext }) {
         <ul>
           <li>
             <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}${pageContext.slug}`}
+              href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}/post/${pageContext.slug}`}
               className="facebook"
               target="_blank"
               rel="noopener noreferrer"
@@ -101,7 +102,7 @@ function SinglePost({ data, pageContext }) {
               href={
                 `https://www.twitter.com/share?url=${
                   baseUrl
-                }${pageContext.slug
+                }/post/${pageContext.slug
                 }&text=${
                   post.title
                 }&via=${
@@ -118,7 +119,7 @@ function SinglePost({ data, pageContext }) {
             <a
               href={
                 `https://www.linkedin.com/shareArticle?url=${
-                  baseUrl}${pageContext.slug}`
+                  baseUrl}/post/${pageContext.slug}`
               }
               className="linkedin"
               target="_blank"
@@ -139,6 +140,7 @@ export const postQuery = graphql`
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       html
+      timeToRead
       frontmatter {
         title
         date(formatString: "MMM D, YYYY")

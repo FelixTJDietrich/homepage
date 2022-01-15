@@ -19,6 +19,7 @@ function PostList({ data, pageContext }) {
           body={node.excerpt}
           tags={node.frontmatter.tags}
           image={node.frontmatter.image}
+          timeToRead={node.timeToRead}
         />
       ))}
       <PaginationLinks currentPage={currentPage} numberOfPages={numberOfPages} />
@@ -48,6 +49,7 @@ export const postListQuery = graphql`
             }
           }
           excerpt
+          timeToRead
         }
       }
     }
