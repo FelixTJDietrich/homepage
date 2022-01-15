@@ -25,7 +25,7 @@ function Sidebar() {
     <div className="position-sticky" style={{ top: '2em' }}>
       <Card className="shadow-sm">
         <CardBody>
-          <StaticImage src="../images/author.jpg" alt="My profile picture" className="rounded-circle avatar-image" />
+          <StaticImage src="../images/author.jpg" alt="My profile picture" imgClassName="rounded-circle avatar-image" />
           <CardTitle className="text-center text-uppercase mb-3">{author.name}</CardTitle>
           <CardText>
             {author.bio}
