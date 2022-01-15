@@ -91,7 +91,7 @@ function AboutPage() {
           <CardText>
             Feel free to
             {' '}
-            <Link href={`mailto:${author.email}`} target="_blank" rel="noopener noreferrer" className="email">contact me</Link>
+            <a href={`mailto:${author.email}`} target="_blank" rel="noopener noreferrer" className="email">contact me</a>
             {' '}
             with feedback, constructive criticism, or thoughts. I will try to respond.
           </CardText>
@@ -111,7 +111,7 @@ Might add my CV in the future...
     </CardTitle>
     <CardText>
     Are you interested in my CV? Feel free to download the pdf or check it out on&nbsp;
-    <Link href={"https://www.linkedin.com/in/" + author.handles.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin">LinkedIn</Link>.
+    <a href={"https://www.linkedin.com/in/" + author.handles.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin">LinkedIn</a>.
     </CardText>
     // Link to cv.pdf generated with latex inside my github
   </CardBody>

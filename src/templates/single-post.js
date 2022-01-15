@@ -43,6 +43,7 @@ function SinglePost({ data, pageContext }) {
             image={getImage(post.image)}
             style={{ width: '100%' }}
             imgStyle={{ objectFit: 'cover' }}
+            alt=""
           />
           )}
         <CardTitle tag="h1" className="mb-1">{post.title}</CardTitle>

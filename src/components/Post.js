@@ -29,7 +29,7 @@ function Post({
       </div>
       {image && (
       <div className="col-auto d-none d-lg-block" style={{ maxWidth: '50%' }}>
-        <GatsbyImage image={getImage(image)} style={{ height: '100%' }} imgStyle={{ objectFit: 'cover' }} />
+        <GatsbyImage image={getImage(image)} style={{ height: '100%' }} imgStyle={{ objectFit: 'cover' }} alt="" />
       </div>
       )}
     </div>
