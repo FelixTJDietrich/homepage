@@ -22,26 +22,24 @@ function Layout({ children }) {
       }
     `}
       render={(data) => (
-        <body className="d-flex flex-column min-vh-100">
+        <div className="d-flex flex-column min-vh-100">
           <header>
             <Header siteTitle={data.site.siteMetadata?.title || 'Title'} />
           </header>
-          <content>
-            <Container className="container" id="content">
-              <Row>
-                <Col md="8">
-                  {children}
-                </Col>
-                <Col md="4">
-                  <Sidebar />
-                </Col>
-              </Row>
-            </Container>
-          </content>
+          <Container className="container" id="content">
+            <Row>
+              <Col md="8">
+                {children}
+              </Col>
+              <Col md="4">
+                <Sidebar />
+              </Col>
+            </Row>
+          </Container>
           <footer className="mt-auto">
             <Footer />
           </footer>
-        </body>
+        </div>
       )}
     />
   );
