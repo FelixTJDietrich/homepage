@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import {
-  Card, CardTitle, CardText, CardSubtitle, CardBody, Badge,
-} from 'reactstrap';
+import { Badge } from 'reactstrap';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { slugify } from '../util/utilityFunctions';
 
@@ -10,32 +8,28 @@ function Post({
   title, slug, date, body, tags, image,
 }) {
   return (
-    <Card className="shadow-sm">
-      {image && (
-      <Link to={`/${slug}`}>
-        <GatsbyImage className="card-image-top rounded-top" image={getImage(image)} style={{ width: '100%' }} imgStyle={{ objectFit: 'cover' }} />
-      </Link>
-      )}
-      <CardBody>
-        <CardTitle tag="h5" className="mb-1">
-          <Link to={`/${slug}`} style={{ color: 'rgb(40, 40, 40)' }}>{title}</Link>
-        </CardTitle>
-        <CardSubtitle className="mb-2 text-muted">
-          {date}
-        </CardSubtitle>
-        <CardText>{body}</CardText>
-        <ul className="post-tags">
+    <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+      <div className="col p-4 d-flex flex-column position-static blog-post">
+        <h3 className="mb-0">{title}</h3>
+        <div className="mb-1 text-muted">{date}</div>
+        <p className="card-text mb-2">{body}</p>
+        <Link to={`/${slug}`} className="stretched-link mb-2">Continue reading</Link>
+        <ul className="post-tags mb-0">
           {tags.map((tag) => (
             <li key={tag}>
               <Link to={`/tag/${slugify(tag)}`}>
-                <Badge color="primary" className="btn text-uppercase">{tag}</Badge>
+                <Badge color="primary" className="btn text-uppercase mb-0 stretched-link" style={{ position: 'relative' }}>{tag}</Badge>
               </Link>
             </li>
           ))}
         </ul>
-        <Link to={`/${slug}`} className="btn btn-outline-primary float-right">Read more</Link>
-      </CardBody>
-    </Card>
+      </div>
+      {image && (
+      <div className="col-auto d-none d-lg-block" style={{ maxWidth: '50%' }}>
+        <GatsbyImage image={getImage(image)} style={{ height: '100%' }} imgStyle={{ objectFit: 'cover' }} />
+      </div>
+      )}
+    </div>
   );
 }
 

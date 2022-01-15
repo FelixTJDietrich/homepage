@@ -52,7 +52,7 @@ export const tagQuery = graphql`
           id
           frontmatter {
             title
-            date(formatString: "MMM Do YYYY")
+            date(formatString: "MMM D, YYYY")
             slug
             tags
             image {

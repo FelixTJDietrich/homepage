@@ -54,7 +54,7 @@ function SinglePost({ data, pageContext }) {
           {post.tags.map((tag) => (
             <li key={tag}>
               <Link to={`/tag/${slugify(tag)}`}>
-                <Badge color="primary">
+                <Badge color="primary" className="btn text-uppercase">
                   {tag}
                 </Badge>
               </Link>
@@ -141,11 +141,11 @@ export const postQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMM Do YYYY")
+        date(formatString: "MMM D, YYYY")
         tags
         image {
           childImageSharp {
-            gatsbyImageData(height: 200)
+            gatsbyImageData(height: 400)
           }
         }
       }
@@ -153,7 +153,7 @@ export const postQuery = graphql`
         ... on File {
           relativePath
           sourceInstanceName
-          modifiedTime(formatString: "MMM Do YYYY")
+          modifiedTime(formatString: "MMM D, YYYY")
         }
       }
     }
