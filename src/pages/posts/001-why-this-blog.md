@@ -30,7 +30,7 @@ As already said, the main reason is self-improvement.
 
 A blog seems to me the next major step in my self-improvement journey. It will help me solve a lot of issues and challenges I'm experiencing in life.
 
-### 1. Overcoming perfectionism
+### Overcoming perfectionism
 
 I suffer from perfectionism and I’m trying to work on it.
 
@@ -40,7 +40,7 @@ Mistakes cause me a lot of suffering. Making a public mistake and being seen as 
 
 Perfectionism gets in the way of learning and accomplishing. With a blog I’d become more comfortable with failing and making mistakes publicly.
 
-### 2. Reducing shame
+### Reducing shame
 
 Shame rules my life.
 
@@ -50,7 +50,7 @@ When I used commute by train for example, I would just sit there in silence for 
 
 I have come a long way with managing shame but there are still ways to go. I want to become more comfortable sharing my "shameful" self. A blog is a drastic measure in that regard.
 
-### 3. Challenging indifference
+### Challenging indifference
 
 Intense amount of shame and avoidance caused indifference for me.
 
@@ -60,7 +60,7 @@ It is easier to be apathetic to something you can not get then going through the
 
 I’m more balanced now but still struggle with my fair share of apathy and finding curiosity. This blog should help me get more interested and mindful about my interests again.
 
-### 4. Connecting with others
+### Connecting with others
 
 I have been an inactive node in the social graph of society. Information that reached me through the network would not propagate any further. I want to change that.
 
@@ -68,7 +68,7 @@ In the past years, I have met people that I like and started wanting to discover
 
 Last year felt like I was learning exponentially more things because of the connections I made. I want to learn new things, connect with more people, make new friends, and experience new things. A blog will help with that. I want to become an active node in the social graph.
 
-### 5. Million other reasons
+### Million other reasons
 
 There are obviously a lot more reasons I could list such as: improving my writing, building a brand, documenting life, keeping busy, helping others, learning self-expression, getting thoughts straight, and so on...
 
