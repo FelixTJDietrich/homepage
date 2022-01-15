@@ -1,8 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import {
-  Card, CardBody, CardSubtitle, CardTitle, CardHeader,
-} from 'reactstrap';
 import Layout from '../components/layout';
 import Post from '../components/Post';
 
@@ -12,19 +9,12 @@ function TagPosts({ data, pageContext }) {
 
   return (
     <Layout>
-      <Card className="mb-3">
-        <CardHeader>
-          Info
-        </CardHeader>
-        <CardBody>
-          <CardTitle tag="h5" className="mb-1 info-title">
-            {`Posts tagged with "${tag}"`}
-          </CardTitle>
-          <CardSubtitle className="mb-1 text-muted">
-            {`${totalCount} post${totalCount === 1 ? '' : 's'}`}
-          </CardSubtitle>
-        </CardBody>
-      </Card>
+      <h2 className="mb-1">
+        {`${tag} posts`}
+      </h2>
+      <p className="mb-4 text-muted">
+        {`${totalCount} post${totalCount === 1 ? '' : 's'}`}
+      </p>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <Post
           key={node.id}
@@ -34,6 +24,7 @@ function TagPosts({ data, pageContext }) {
           body={node.excerpt}
           tags={node.frontmatter.tags}
           image={node.frontmatter.image}
+          timeToRead={node.timeToRead}
         />
       ))}
     </Layout>
@@ -61,6 +52,7 @@ export const tagQuery = graphql`
               }
             }
           }
+          timeToRead
           excerpt
         }
       }
