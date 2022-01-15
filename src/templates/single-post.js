@@ -2,7 +2,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import {
-  CardBody, CardSubtitle, CardTitle, Badge,
+  CardSubtitle, CardTitle, Badge,
 } from 'reactstrap';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
@@ -35,35 +35,33 @@ function SinglePost({ data, pageContext }) {
   return (
     <Layout>
       <Seo title={post.title} />
-      <div>
+      <div className="blog-post">
         {post.image
           && (
           <GatsbyImage
-            className="card-image-top rounded-top"
+            className="card-image-top rounded mb-4"
             image={getImage(post.image)}
             style={{ width: '100%' }}
             imgStyle={{ objectFit: 'cover' }}
           />
           )}
-        <CardBody>
-          <CardSubtitle className="mb-1 text-muted">
-            {post.date}
-          </CardSubtitle>
-          <CardTitle tag="h1" className="mb-1">{post.title}</CardTitle>
-          <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-          <ul className="post-tags mb-0">
-            {post.tags.map((tag) => (
-              <li key={tag}>
-                <Link to={`/tag/${slugify(tag)}`}>
-                  <Badge color="primary">
-                    {tag}
-                  </Badge>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </CardBody>
-        <div className="text-muted">
+        <CardTitle tag="h1" className="mb-1">{post.title}</CardTitle>
+        <CardSubtitle className="mb-2 text-muted">
+          {post.date}
+        </CardSubtitle>
+        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+        <ul className="post-tags mb-2">
+          {post.tags.map((tag) => (
+            <li key={tag}>
+              <Link to={`/tag/${slugify(tag)}`}>
+                <Badge color="primary">
+                  {tag}
+                </Badge>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <div className="text-muted mb-4">
           <small>
             Updated
             {' '}

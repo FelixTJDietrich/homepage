@@ -17,7 +17,7 @@ function AboutPage() {
   return (
     <Layout>
       <Seo title="About" />
-      <Card className="mb-2">
+      <Card className="shadow-sm">
         <CardBody>
           <CardTitle tag="h3">
             Hi! 👋 I&apos;m Felix, also called T.J.
@@ -31,7 +31,7 @@ function AboutPage() {
           </CardText>
         </CardBody>
       </Card>
-      <Card className="mb-2">
+      <Card className="shadow-sm">
         <CardBody>
           <CardTitle tag="h5">
             How I like being called
@@ -45,7 +45,7 @@ function AboutPage() {
           </CardText>
         </CardBody>
       </Card>
-      <Card className="mb-2">
+      <Card className="shadow-sm">
         <CardBody>
           <CardTitle tag="h5">
             Interests or things I care about
@@ -67,7 +67,7 @@ function AboutPage() {
           </CardText>
         </CardBody>
       </Card>
-      <Card className="mb-2">
+      <Card className="shadow-sm">
         <CardBody>
           <CardTitle tag="h5">
             Why this blog?
@@ -83,7 +83,7 @@ function AboutPage() {
           </CardText>
         </CardBody>
       </Card>
-      <Card>
+      <Card className="shadow-sm">
         <CardBody>
           <CardTitle tag="h5">
             Feedback or thoughts?

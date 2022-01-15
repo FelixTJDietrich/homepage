@@ -10,19 +10,19 @@ function Post({
   title, slug, date, body, tags, image,
 }) {
   return (
-    <Card>
+    <Card className="shadow-sm">
       {image && (
       <Link to={`/${slug}`}>
         <GatsbyImage className="card-image-top rounded-top" image={getImage(image)} style={{ width: '100%' }} imgStyle={{ objectFit: 'cover' }} />
       </Link>
       )}
       <CardBody>
-        <CardSubtitle className="mb-1 text-muted">
-          {date}
-        </CardSubtitle>
         <CardTitle tag="h5" className="mb-1">
           <Link to={`/${slug}`} style={{ color: 'rgb(40, 40, 40)' }}>{title}</Link>
         </CardTitle>
+        <CardSubtitle className="mb-2 text-muted">
+          {date}
+        </CardSubtitle>
         <CardText>{body}</CardText>
         <ul className="post-tags">
           {tags.map((tag) => (

@@ -5,7 +5,7 @@ import {
 
 function Newsletter() {
   return (
-    <Card>
+    <Card className="shadow-sm">
       <CardBody>
         <CardTitle className="text-center text-uppercase mb-3">
           Newsletter

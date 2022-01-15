@@ -34,8 +34,8 @@ export const sidebarQuery = graphql`
 
 function Sidebar() {
   return (
-    <div className="position-sticky" style={{top: '2em'}}>
-      <Card>
+    <div className="position-sticky" style={{ top: '2em' }}>
+      <Card className="shadow-sm">
         <CardBody>
           <StaticQuery
             query={sidebarQuery}
