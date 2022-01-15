@@ -25,12 +25,13 @@ function SinglePost({ data, pageContext }) {
   const post = data.markdownRemark.frontmatter;
   const file = data.markdownRemark.parent;
   const baseUrl = 'https://felixdietrich.com/';
+  const postUrl = `${baseUrl}post/${pageContext.slug}`;
 
   const disqusShortname = 'felixtjdietrich';
   const disqusConfig = {
     identifier: data.markdownRemark.id,
     title: post.title,
-    url: baseUrl + pageContext.slug,
+    url: postUrl,
   };
 
   return (
@@ -92,7 +93,7 @@ function SinglePost({ data, pageContext }) {
         <ul>
           <li>
             <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=${baseUrl}/post/${pageContext.slug}`}
+              href={`https://www.facebook.com/sharer/sharer.php?u=${postUrl}`}
               className="facebook"
               target="_blank"
               rel="noopener noreferrer"
@@ -104,8 +105,7 @@ function SinglePost({ data, pageContext }) {
             <a
               href={
                 `https://www.twitter.com/share?url=${
-                  baseUrl
-                }/post/${pageContext.slug
+                  postUrl
                 }&text=${
                   post.title
                 }&via=${
@@ -121,8 +121,7 @@ function SinglePost({ data, pageContext }) {
           <li>
             <a
               href={
-                `https://www.linkedin.com/shareArticle?url=${
-                  baseUrl}/post/${pageContext.slug}`
+                `https://www.linkedin.com/shareArticle?url=${postUrl}`
               }
               className="linkedin"
               target="_blank"
@@ -134,7 +133,7 @@ function SinglePost({ data, pageContext }) {
           <li>
             <Button
               onClick={() => {
-                navigator.clipboard.writeText(`${baseUrl}/post/${pageContext.slug}`);
+                navigator.clipboard.writeText(postUrl);
               }}
               className="permalink"
               id="PermalinkButton"
