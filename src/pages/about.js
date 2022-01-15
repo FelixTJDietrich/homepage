@@ -56,14 +56,14 @@ function AboutPage() {
           </CardSubtitle>
           <CardText>
             mental health. self-improvement. compassion.
-            being free, open minded, and non-judgemental. behavior. emotions.
-            emotional intelligence. decreasing (unhealthy) shame. overcoming biases.
-            decreasing (harmful) ignorance. productivity. money. work-life-balance.
+            being free, open minded, and non-judgemental. behavior.
+            emotional intelligence. decreasing shame. overcoming biases.
+            decreasing ignorance. productivity. money. work-life-balance.
             blogging. machine learning. natural language processing. computer vision.
             iOS development. web development. UI/UX. internet. technology. languages.
             Japanese. Japan. long hair. spaceflight. travelling. different cultures.
-            people. toxic masculinity. identity. sexuality. self-expression.
-            acceptance. being more social. social skills. peace.
+            people. acceptance. identity. sexuality. self-expression.
+            being more social. social skills. peace.
           </CardText>
         </CardBody>
       </Card>
