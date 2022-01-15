@@ -25,6 +25,25 @@
           color: rgb(0, 119, 181);
         }
       }
+
+      button {
+        opacity: 0.6;
+        transition: all 0.1s ease-in;
+
+        background-color: transparent;
+        border-color: transparent;
+        padding: 0;
+
+        &:hover {
+          opacity: 1;
+          background-color: transparent;
+          border-color: transparent;
+        }
+
+        &.permalink {
+          color: black;
+        }
+      }
     }
   }
 }

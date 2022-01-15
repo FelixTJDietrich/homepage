@@ -2,7 +2,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import {
-  CardSubtitle, CardTitle, Badge,
+  CardSubtitle, CardTitle, Badge, Button, UncontrolledTooltip,
 } from 'reactstrap';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
@@ -15,6 +15,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 import { DiscussionEmbed } from 'disqus-react';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 import author from '../util/author';
 import { slugify } from '../util/utilityFunctions';
 import Seo from '../components/seo';
@@ -129,6 +130,23 @@ function SinglePost({ data, pageContext }) {
             >
               <FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth />
             </a>
+          </li>
+          <li>
+            <Button
+              onClick={() => {
+                navigator.clipboard.writeText(`${baseUrl}/post/${pageContext.slug}`);
+              }}
+              className="permalink"
+              id="PermalinkButton"
+            >
+              <FontAwesomeIcon icon={faLink} size="2x" fixedWidth />
+            </Button>
+            <UncontrolledTooltip
+              target="PermalinkButton"
+              placement="top"
+            >
+              Copy link
+            </UncontrolledTooltip>
           </li>
         </ul>
       </div>
