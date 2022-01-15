@@ -2,7 +2,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import {
-  Card, CardBody, CardSubtitle, CardTitle, CardFooter, Badge,
+  CardBody, CardSubtitle, CardTitle, Badge,
 } from 'reactstrap';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
@@ -35,7 +35,7 @@ function SinglePost({ data, pageContext }) {
   return (
     <Layout>
       <Seo title={post.title} />
-      <Card>
+      <div>
         {post.image
           && (
           <GatsbyImage
@@ -63,7 +63,7 @@ function SinglePost({ data, pageContext }) {
             ))}
           </ul>
         </CardBody>
-        <CardFooter className="text-muted">
+        <div className="text-muted">
           <small>
             Updated
             {' '}
@@ -80,8 +80,8 @@ function SinglePost({ data, pageContext }) {
               <FontAwesomeIcon icon={faGithub} fixedWidth />
             </Link>
           </small>
-        </CardFooter>
-      </Card>
+        </div>
+      </div>
 
       <h3 className="text-center">
         Share this post
