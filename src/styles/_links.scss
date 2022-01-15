@@ -27,21 +27,29 @@
       }
 
       button {
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        outline: none;
+        box-shadow: none;
+        cursor: pointer;
+
         opacity: 0.6;
         transition: all 0.1s ease-in;
 
-        background-color: transparent;
-        border-color: transparent;
-        padding: 0;
-
         &:hover {
           opacity: 1;
-          background-color: transparent;
-          border-color: transparent;
+          outline: none;
+          box-shadow: none;
         }
 
         &.permalink {
           color: black;
+        }
+        &:focus {
+          opacity: 1;
+          outline: none !important;
+          box-shadow: none !important;
         }
       }
     }
