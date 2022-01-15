@@ -39,11 +39,12 @@ function SinglePost({ data, pageContext }) {
         {post.image
           && (
           <GatsbyImage
-            className="card-image-top rounded mb-4"
+            className="card-image-top mb-4"
             image={getImage(post.image)}
             style={{ width: '100%' }}
             imgStyle={{ objectFit: 'cover' }}
             alt=""
+            imgClassName="rounded"
           />
           )}
         <CardTitle tag="h1" className="mb-1">{post.title}</CardTitle>
