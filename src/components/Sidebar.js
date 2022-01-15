@@ -2,8 +2,8 @@ import React from 'react';
 import {
   Card, CardTitle, CardBody, CardText,
 } from 'reactstrap';
-import { graphql, StaticQuery, Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -20,33 +20,12 @@ import {
 
 import author from '../util/author';
 
-export const sidebarQuery = graphql`
-  query {
-    authorImage: file(relativePath: { eq: "author.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 200, maxHeight: 200) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`;
-
 function Sidebar() {
   return (
     <div className="position-sticky" style={{ top: '2em' }}>
       <Card className="shadow-sm">
         <CardBody>
-          <StaticQuery
-            query={sidebarQuery}
-            render={(data) => (
-              <Img
-                fluid={data.authorImage.childImageSharp.fluid}
-                alt="My profile image"
-                className="rounded-circle avatar-image"
-              />
-            )}
-          />
+          <StaticImage src="../images/author.jpg" alt="My profile picture" className="rounded-circle avatar-image" />
           <CardTitle className="text-center text-uppercase mb-3">{author.name}</CardTitle>
           <CardText>
             {author.bio}
