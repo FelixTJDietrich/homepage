@@ -9,6 +9,7 @@ import {
   NavbarToggler,
   NavItem,
   NavLink,
+  Container,
 } from 'reactstrap';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -44,8 +45,8 @@ class Header extends React.Component {
     const { pathname } = this.location;
     const { isOpen } = this.state;
     return (
-      <div>
-        <Navbar fixed="top" light expand="sm" container="sm">
+      <Container>
+        <Navbar light expand="sm" container="sm" className="py-3">
           <NavbarBrand href="/">{this.siteTitle}</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={isOpen} navbar>
@@ -83,7 +84,7 @@ class Header extends React.Component {
             </Nav>
           </Collapse>
         </Navbar>
-      </div>
+      </Container>
     );
   }
 }
