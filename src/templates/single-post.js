@@ -67,14 +67,14 @@ function SinglePost({ data, pageContext }) {
             Updated
             {' '}
             {file.modifiedTime}
-            ,&nbsp;
+            .&nbsp;
             <Link
               href={`https://github.com/FelixTJDietrich/homepage/commits/main/${file.sourceInstanceName}/${file.relativePath}`}
               className="github"
               target="_blank"
               rel="noopener noreferrer"
             >
-              view changes on GitHub
+              View changes on GitHub
               {' '}
               <FontAwesomeIcon icon={faGithub} fixedWidth />
             </Link>
