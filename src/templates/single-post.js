@@ -14,7 +14,7 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 
-import { DiscussionEmbed } from 'disqus-react';
+// import { DiscussionEmbed } from 'disqus-react';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import author from '../util/author';
 import { slugify } from '../util/utilityFunctions';
@@ -27,12 +27,12 @@ function SinglePost({ data, pageContext }) {
   const baseUrl = 'https://felixdietrich.com/';
   const postUrl = `${baseUrl}post/${pageContext.slug}`;
 
-  const disqusShortname = 'felixtjdietrich';
-  const disqusConfig = {
-    identifier: data.markdownRemark.id,
-    title: post.title,
-    url: postUrl,
-  };
+  // const disqusShortname = 'felixtjdietrich';
+  // const disqusConfig = {
+  //   identifier: data.markdownRemark.id,
+  //   title: post.title,
+  //   url: postUrl,
+  // };
 
   return (
     <Layout>
@@ -149,7 +149,7 @@ function SinglePost({ data, pageContext }) {
           </li>
         </ul>
       </div>
-      <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
+      {/* <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} theme="light" /> */}
     </Layout>
   );
 }
