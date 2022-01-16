@@ -9,31 +9,31 @@
 
       a {
         transition: all 0.1s ease-out;
-        color: $dark-gray;
+        color: var(--link-muted);
 
         &.location:hover {
-          color: rgb(0, 128, 255);
+          color: var(--location);
         }
         &.email:hover {
-          color: black;
+          color: var(--primaryText);
         }
         &.instagram:hover {
-          color: #e95950;
+          color: var(--instagram);
         }
         &.facebook:hover {
-          color: rgb(66, 103, 178);
+          color: var(--facebook);
         }
         &.twitter:hover {
-          color: rgb(56, 161, 243);
+          color: var(--twitter);
         }
         &.google:hover {
-          color: rgb(221, 75, 57);
+          color: var(--google);
         }
         &.linkedin:hover {
-          color: rgb(0, 119, 181);
+          color: var(--linkedin);
         }
         &.github:hover {
-          color: #4078c0;
+          color: var(--github);
         }
       }
 

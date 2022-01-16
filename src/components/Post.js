@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { Badge } from 'reactstrap';
+import { Card, Badge } from 'reactstrap';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { slugify } from '../util/utilityFunctions';
 
@@ -8,7 +8,7 @@ function Post({
   title, slug, date, body, tags, image, timeToRead,
 }) {
   return (
-    <div className="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+    <Card className="row g-0 rounded flex-md-row mb-4 shadow-sm h-md-250">
       <div className="col p-4 d-flex flex-column position-static blog-post">
         <h3 className="mb-0">{title}</h3>
         <div className="mb-1 text-muted">{date}</div>
@@ -38,7 +38,7 @@ function Post({
         />
       </div>
       )}
-    </div>
+    </Card>
   );
 }
 

@@ -1,5 +1,7 @@
 .card {
   margin-bottom: 30px;
+  background-color: var(--bg);
+  border: 1px solid var(--separator);
 }
 ul.post-tags {
   padding: 0;
@@ -13,4 +15,31 @@ ul.post-tags {
 h1.card-title {
   margin-bottom: 20px;
   text-align: left;
+}
+
+.shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem var(--shadow) !important;
+}
+
+.text-muted {
+  color: var(--secondaryText) !important;
+}
+
+
+.page-item .page-link {
+  color: #fff;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.page-item.active .page-link {
+  color: #fff;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  background-color: var(--bg);
+  border-color: var(--separator-outline);
 }

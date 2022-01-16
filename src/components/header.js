@@ -16,6 +16,8 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 import { Location } from '@reach/router';
+import { faAdjust } from '@fortawesome/free-solid-svg-icons';
+import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 import author from '../util/author';
 
 class Header extends React.Component {
@@ -30,9 +32,30 @@ class Header extends React.Component {
     const { pathname } = this.location;
     return (
       <Container className="site-header py-3">
-        <NavLink className="header-logo text-center" href="/">
-          {author.name}
-        </NavLink>
+        <div className="header">
+          <ThemeToggler>
+            {({ theme, toggleTheme }) => (
+              <div className="toggle-theme-container text-end">
+                <div
+                  className="toggle-theme"
+                  style={{
+                    WebkitTransform: theme === 'dark' ? 'scaleX(1)' : 'scaleX(-1)',
+                    transform: theme === 'dark' ? 'scaleX(1)' : 'scaleX(-1)',
+                  }}
+                >
+                  <FontAwesomeIcon
+                    icon={faAdjust}
+                    onClick={() => toggleTheme(theme === 'dark' ? 'light' : 'dark')}
+                    size="2x"
+                  />
+                </div>
+              </div>
+            )}
+          </ThemeToggler>
+          <NavLink className="logo text-center" href="/">
+            {author.name}
+          </NavLink>
+        </div>
         <Navbar>
           <Nav className="mr-auto">
             <NavItem>

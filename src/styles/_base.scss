@@ -1,12 +1,77 @@
 body {
-  background-color: $white;
-  //font-family: $site-font;
+  --bg: #fff;
+  --bg-footer: #f9f9f9;
+  --primaryText: #000;
+  --secondaryText: #968d8d;
+  --logo: #000;
+
+  --primary: hsl(216, 98%, 52%);
+  --secondary: hsl(208, 7%, 46%);
+
+  --link: hsl(211, 100%, 35%);
+  --link-hover: #007bff;
+  --link-muted: rgb(80, 80, 80);
+  --link-nav: #6c757d;
+  --link-nav-active: #000;
+  
+  --separator: rgba(0, 0, 0, 0.125);
+  --separator-outline: hsl(210, 14%, 89%); 
+
+  --instagram: #e95950;
+  --facebook: rgb(66, 103, 178);
+  --twitter: rgb(56, 161, 243);
+  --google: rgb(221, 75, 57);
+  --linkedin: rgb(0, 119, 181);
+  --github: #4078c0;
+  --location: rgb(0, 128, 255);
+  
+  --shadow: rgba(0, 0, 0, 0.075);
+
+  --bs-body-color: var(--primaryText);
+ 
+  background-color: var(--bg);
+}
+body.dark {
+  -webkit-font-smoothing: antialiased;
+
+  --bg: rgb(40, 40, 40);
+  --bg-footer: rgb(34, 34, 34);
+  --primaryText: #e8e8e8;
+  --secondaryText: hsl(208, 7%, 65%);
+  
+  --logo: #fff;
+
+  --primary: hsl(216, 98%, 52%);
+  --secondary: hsl(208, 7%, 65%);
+
+  --link: hsl(211, 100%, 65%);
+  --link-hover: rgb(0, 123, 255);
+  --link-muted: rgb(175, 175, 175);
+  --link-nav: hsl(208, 7%, 54%);
+  --link-nav-active: #fff;
+  
+  --separator: rgba(255, 255, 255, 0.125);
+  --separator-outline: hsl(210, 14%, 26%);
+
+  --instagram: #e95950;
+  --facebook: rgb(66, 103, 178);
+  --twitter: rgb(56, 161, 243);
+  --google: rgb(221, 75, 57);
+  --linkedin: rgb(0, 119, 181);
+  --github: #4078c0;
+  --location: rgb(0, 128, 255);
+
+  --shadow: rgba(0, 0, 0, 0.075);
+}
+body *::selection {
+  background: var(--link-muted);
+  color: #fff;
 }
 a {
-  color: #0056b3;
+  color: var(--link);
   text-decoration: none;
   &:hover {
-    color: #007bff;
+    color: var(--link-hover);
     text-decoration: underline;
   }
 }

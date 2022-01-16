@@ -15,6 +15,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-dark-mode',
     'gatsby-plugin-image',
     'gatsby-plugin-sass',
     'gatsby-plugin-catch-links',

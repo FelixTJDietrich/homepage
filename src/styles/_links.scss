@@ -7,22 +7,22 @@
       margin: auto 20px;
 
       a {
-        opacity: 0.6;
+        opacity: 0.75;
         transition: all 0.1s ease-in;
         &:hover {
           opacity: 1;
         }
         &.facebook {
-          color: rgb(66, 103, 178);
+          color: var(--facebook);
         }
         &.twitter {
-          color: rgb(56, 161, 243);
+          color: var(--twitter);
         }
         &.google {
-          color: rgb(221, 75, 57);
+          color: var(--google);
         }
         &.linkedin {
-          color: rgb(0, 119, 181);
+          color: var(--linkedin);
         }
       }
 
@@ -44,7 +44,7 @@
         }
 
         &.permalink {
-          color: black;
+          color: var(--primaryText);
         }
         &:focus {
           opacity: 1;

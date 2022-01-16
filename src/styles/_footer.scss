@@ -1,9 +1,9 @@
 .site-footer {
-  background-color: #f9f9f9;
+  background-color: var(--bg-footer);
   margin-top: 20px;
   padding: 10px;
   text-align: center;
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
+  border-top: 1px solid var(--separator);
 
   .footer-social-links {
     text-align: center;
@@ -15,25 +15,25 @@
         display: inline-block;
 
         a {
-          color: $dark-gray;
+          color: var(--link-muted);
 
           &.instagram:hover {
-            color: #e95950;
+            color: var(--instagram);
           }
           &.facebook:hover {
-            color: rgb(66, 103, 178);
+            color: var(--facebook);
           }
           &.twitter:hover {
-            color: rgb(56, 161, 243);
+            color: var(--twitter);
           }
           &.google:hover {
-            color: rgb(221, 75, 57);
+            color: var(--google);
           }
           &.linkedin:hover {
-            color: rgb(0, 119, 181);
+            color: var(--linkedin);
           }
           &.github:hover {
-            color: #4078c0;
+            color: var(--github);
           }
         }
       }
