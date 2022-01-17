@@ -1,32 +1,82 @@
-.social-share-links {
-  ul {
-    display: inline-flex;
-    margin: 20px auto;
+.share-btn {
+  background: none !important;
+  border: none !important;
+  padding: 0 !important;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
 
+  transition: all 0.1s ease-out;
+  color: var(--link-muted);
+
+  svg {
+    margin-right: 4px;
+  }
+
+  &:hover {
+    outline: none;
+    box-shadow: none;
+    color: var(--primaryText);
+  }
+
+  &:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.social-share-tooltip {
+  .tooltip.show {
+    opacity: 1;
+  }
+}
+
+.social-share-links {
+  text-align: left;
+
+  ul {
     li {
-      margin: auto 20px;
+      margin: 10px 7px;
+
+      svg {
+        margin-right: 4px;
+      }
 
       a {
-        opacity: 0.75;
-        transition: all 0.1s ease-in;
-        &:hover {
-          opacity: 1;
-        }
-        &.facebook {
+        transition: all 0.1s ease-out;
+        color: rgb(175, 175, 175);
+
+        &.facebook:hover {
           color: var(--facebook);
         }
-        &.twitter {
+        &.twitter:hover {
           color: var(--twitter);
         }
-        &.google {
+        &.google:hover {
           color: var(--google);
         }
-        &.linkedin {
+        &.linkedin:hover {
           color: var(--linkedin);
         }
       }
 
-      button {
+      a:link {
+        text-decoration: none;
+      }
+
+      a:visited {
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      a:active {
+        text-decoration: underline;
+      }
+
+      button.permalink {
         background: none !important;
         border: none !important;
         padding: 0 !important;
@@ -34,20 +84,18 @@
         box-shadow: none;
         cursor: pointer;
 
-        opacity: 0.6;
-        transition: all 0.1s ease-in;
+        font-size: 0.875rem;
+
+        transition: all 0.1s ease-out;
+        color: rgb(175, 175, 175);
 
         &:hover {
-          opacity: 1;
           outline: none;
           box-shadow: none;
+          color: #fff;
         }
 
-        &.permalink {
-          color: var(--primaryText);
-        }
         &:focus {
-          opacity: 1;
           outline: none !important;
           box-shadow: none !important;
         }

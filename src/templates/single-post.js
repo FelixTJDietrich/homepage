@@ -15,7 +15,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 // import { DiscussionEmbed } from 'disqus-react';
-import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkAlt, faLink } from '@fortawesome/free-solid-svg-icons';
 import author from '../util/author';
 import { slugify } from '../util/utilityFunctions';
 import Seo from '../components/seo';
@@ -66,7 +66,7 @@ function SinglePost({ data, pageContext }) {
             </li>
           ))}
         </ul>
-        <div className="text-muted mb-4">
+        <div className="text-muted mb-2">
           <small>
             Updated
             {' '}
@@ -84,70 +84,79 @@ function SinglePost({ data, pageContext }) {
             </Link>
           </small>
         </div>
-      </div>
-
-      <h3 className="text-center">
-        Share this post
-      </h3>
-      <div className="text-center social-share-links">
-        <ul>
-          <li>
-            <a
-              href={`https://www.facebook.com/sharer/sharer.php?u=${postUrl}`}
-              className="facebook"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faFacebookF} size="2x" fixedWidth />
-            </a>
-          </li>
-          <li>
-            <a
-              href={
-                `https://www.twitter.com/share?url=${
-                  postUrl
-                }&text=${
-                  post.title
-                }&via=${
-                  author.handles.twitter}`
-              }
-              className="twitter"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faTwitter} size="2x" fixedWidth />
-            </a>
-          </li>
-          <li>
-            <a
-              href={
-                `https://www.linkedin.com/shareArticle?url=${postUrl}`
-              }
-              className="linkedin"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth />
-            </a>
-          </li>
-          <li>
-            <Button
-              onClick={() => {
-                navigator.clipboard.writeText(postUrl);
-              }}
-              className="permalink"
-              id="PermalinkButton"
-            >
-              <FontAwesomeIcon icon={faLink} size="2x" fixedWidth />
-            </Button>
-            <UncontrolledTooltip
-              target="PermalinkButton"
-              placement="top"
-            >
-              Copy link
-            </UncontrolledTooltip>
-          </li>
-        </ul>
+        <button
+          type="button"
+          className="btn btn-link share-btn mb-4"
+          id="ShareBtn"
+        >
+          <FontAwesomeIcon icon={faExternalLinkAlt} size="sm" fixedWidth />
+          Share
+        </button>
+        <UncontrolledTooltip
+          target="ShareBtn"
+          placement="top"
+          trigger="click"
+          className="social-share-tooltip shadow-sm"
+        >
+          <div className="social-share-links">
+            <ul>
+              <li>
+                <a
+                  href={
+                    `https://www.twitter.com/share?url=${
+                      postUrl
+                    }&text=${
+                      post.title
+                    }&via=${
+                      author.handles.twitter}`
+                  }
+                  className="twitter"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faTwitter} size="lg" fixedWidth />
+                  Twitter
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`https://www.facebook.com/sharer/sharer.php?u=${postUrl}`}
+                  className="facebook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faFacebookF} size="lg" fixedWidth />
+                  Facebook
+                </a>
+              </li>
+              <li>
+                <a
+                  href={
+                    `https://www.linkedin.com/shareArticle?url=${postUrl}`
+                  }
+                  className="linkedin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} size="lg" fixedWidth />
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <Button
+                  onClick={() => {
+                    navigator.clipboard.writeText(postUrl);
+                  }}
+                  className="permalink"
+                  id="PermalinkButton"
+                >
+                  <FontAwesomeIcon icon={faLink} size="lg" fixedWidth />
+                  Copy link
+                </Button>
+              </li>
+            </ul>
+          </div>
+        </UncontrolledTooltip>
       </div>
       {/* <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} theme="light" /> */}
     </Layout>
