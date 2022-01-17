@@ -96,7 +96,7 @@ function SinglePost({ data, pageContext }) {
           target="ShareBtn"
           placement="top"
           trigger="click"
-          className="social-share-tooltip shadow-sm"
+          className="social-share-tooltip"
         >
           <div className="social-share-links">
             <ul>
@@ -148,11 +148,19 @@ function SinglePost({ data, pageContext }) {
                     navigator.clipboard.writeText(postUrl);
                   }}
                   className="permalink"
-                  id="PermalinkButton"
+                  id="CopyLinkButton"
                 >
                   <FontAwesomeIcon icon={faLink} size="lg" fixedWidth />
                   Copy link
                 </Button>
+                <UncontrolledTooltip
+                  target="CopyLinkButton"
+                  placement="right"
+                  trigger="click"
+                  className="social-share-tooltip"
+                >
+                  Copied link!
+                </UncontrolledTooltip>
               </li>
             </ul>
           </div>
