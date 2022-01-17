@@ -84,14 +84,13 @@ function SinglePost({ data, pageContext }) {
             </Link>
           </small>
         </div>
-        <button
-          type="button"
+        <Button
           className="btn btn-link share-btn mb-4"
           id="ShareBtn"
         >
           <FontAwesomeIcon icon={faExternalLinkAlt} size="sm" fixedWidth />
           Share
-        </button>
+        </Button>
         <UncontrolledTooltip
           target="ShareBtn"
           placement="top"
