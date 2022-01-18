@@ -69,10 +69,11 @@ Over the last few years, I have met some people that I like and connected with o
 Last year especially felt like I was learning exponentially more things because of the connections I made. The learnings would not have been possible on my own. Other people give you a lot of inspirations and insights if you talk to them. On the flip side, you are helping others with their journey.
 
 I want to connect with more people, learn new things, and have new experiences. I want to propagate information to others and receive theirs. A blog will help me become an active node in the social graph.
+
 ## Conclusion
 
 There are obviously more reasons I could list such as: improving my writing, building a brand, documenting my life, learning self-expression, getting my thoughts straight, and so on...
 
-A lot of reasons and benefits will reveal themselves in the future. There are a lot of unknowns. I have started placing a lot of weight on the unknown. I can not assess the hidden value of this blog experiment. Only time will tell its value to me.
+A lot of reasons and benefits will reveal themselves in the future. There are a lot of unknowns. I have started placing a lot of weight on the unknown, and can't assess the hidden value of this blog experiment. Only time will tell its value to me.
 
 I’m starting a blog.
