@@ -51,19 +51,31 @@ function AboutPage() {
             Interests or things I care about
           </CardTitle>
           <CardSubtitle className="mb-1 text-muted">
-            This list is neither exhaustive nor ordered.
-            My interests change and fluctuate constantly.
+            The lists are neither exhaustive nor ordered, and constantly changing.
           </CardSubtitle>
           <CardText>
-            mental health. self-improvement. compassion.
-            being free, open minded, and non-judgemental. behavior.
-            emotional intelligence. decreasing shame. overcoming biases.
-            decreasing ignorance. productivity. money. work-life-balance.
-            blogging. machine learning. natural language processing. computer vision.
-            iOS development. web development. UI/UX. internet. technology. languages.
-            Japanese. Japan. long hair. spaceflight. travelling. different cultures.
-            people. acceptance. identity. sexuality. self-expression.
-            being more social. social skills. peace.
+            <b>Professional:</b>
+            <br />
+            computer science, machine learning, natural language processing, computer vision,
+            iOS development, web development, UI/UX
+          </CardText>
+          <CardText>
+            <b>Personal:</b>
+            <br />
+            self-improvement, freedom, peace, emotional intelligence, open mindedness,
+            work-life-balance, self-expression, identity, being more social,
+            social skills, productivity
+          </CardText>
+          <CardText>
+            <b>Psychological:</b>
+            <br />
+            mental health, behaviour, patterns, shame, avoidance, biases
+          </CardText>
+          <CardText>
+            <b>General:</b>
+            <br />
+            blogging, languages, Japanese, Japan, long hair, spaceflight, travelling,
+            culture, people, technology, money, internet
           </CardText>
         </CardBody>
       </Card>
