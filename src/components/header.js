@@ -14,6 +14,7 @@ import {
   faInstagram,
   faGithub,
 } from '@fortawesome/free-brands-svg-icons';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 
 import { Location } from '@reach/router';
 import { faAdjust } from '@fortawesome/free-solid-svg-icons';
@@ -71,19 +72,19 @@ class Header extends React.Component {
           </Nav>
           <Nav className="ml-auto">
             <NavItem>
-              <NavLink href={`https://www.twitter.com/${author.handles.twitter}`} target="_blank" rel="noopener noreferrer" className="twitter">
+              <OutboundLink href={`https://www.twitter.com/${author.handles.twitter}`} target="_blank" rel="noopener noreferrer" className="twitter nav-link">
                 <FontAwesomeIcon icon={faTwitter} size="lg" fixedWidth />
-              </NavLink>
+              </OutboundLink>
             </NavItem>
             <NavItem>
-              <NavLink href={`https://www.instagram.com/${author.handles.instagram}`} target="_blank" rel="noopener noreferrer" className="instagram">
+              <OutboundLink href={`https://www.instagram.com/${author.handles.instagram}`} target="_blank" rel="noopener noreferrer" className="instagram nav-link">
                 <FontAwesomeIcon icon={faInstagram} size="lg" fixedWidth />
-              </NavLink>
+              </OutboundLink>
             </NavItem>
             <NavItem>
-              <NavLink href={`https://www.github.com/${author.handles.github}`} target="_blank" rel="noopener noreferrer" className="github">
+              <OutboundLink href={`https://www.github.com/${author.handles.github}`} target="_blank" rel="noopener noreferrer" className="github nav-link">
                 <FontAwesomeIcon icon={faGithub} size="lg" fixedWidth />
-              </NavLink>
+              </OutboundLink>
             </NavItem>
           </Nav>
         </Navbar>
