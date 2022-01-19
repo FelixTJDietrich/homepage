@@ -16,6 +16,7 @@ import {
 
 // import { DiscussionEmbed } from 'disqus-react';
 import { faExternalLinkAlt, faLink } from '@fortawesome/free-solid-svg-icons';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import author from '../util/author';
 import { slugify } from '../util/utilityFunctions';
 import Seo from '../components/seo';
@@ -100,7 +101,7 @@ function SinglePost({ data, pageContext }) {
           <div className="social-share-links">
             <ul>
               <li>
-                <a
+                <OutboundLink
                   href={
                     `https://www.twitter.com/share?url=${
                       postUrl
@@ -115,10 +116,10 @@ function SinglePost({ data, pageContext }) {
                 >
                   <FontAwesomeIcon icon={faTwitter} size="lg" fixedWidth />
                   Twitter
-                </a>
+                </OutboundLink>
               </li>
               <li>
-                <a
+                <OutboundLink
                   href={`https://www.facebook.com/sharer/sharer.php?u=${postUrl}`}
                   className="facebook"
                   target="_blank"
@@ -126,10 +127,10 @@ function SinglePost({ data, pageContext }) {
                 >
                   <FontAwesomeIcon icon={faFacebookF} size="lg" fixedWidth />
                   Facebook
-                </a>
+                </OutboundLink>
               </li>
               <li>
-                <a
+                <OutboundLink
                   href={
                     `https://www.linkedin.com/shareArticle?url=${postUrl}`
                   }
@@ -139,7 +140,7 @@ function SinglePost({ data, pageContext }) {
                 >
                   <FontAwesomeIcon icon={faLinkedin} size="lg" fixedWidth />
                   LinkedIn
-                </a>
+                </OutboundLink>
               </li>
               <li>
                 <Button

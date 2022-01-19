@@ -8,6 +8,7 @@ import {
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import author from '../util/author';
 
 function Footer() {
@@ -21,24 +22,24 @@ function Footer() {
       <div className="footer-social-links">
         <ul className="social-links-list">
           <li>
-            <a href={`https://www.twitter.com/${author.handles.twitter}`} target="_blank" rel="noopener noreferrer" className="twitter">
+            <OutboundLink href={`https://www.twitter.com/${author.handles.twitter}`} target="_blank" rel="noopener noreferrer" className="twitter">
               <FontAwesomeIcon icon={faTwitter} size="2x" fixedWidth />
-            </a>
+            </OutboundLink>
           </li>
           <li>
-            <a href={`https://www.instagram.com/${author.handles.instagram}`} target="_blank" rel="noopener noreferrer" className="instagram">
+            <OutboundLink href={`https://www.instagram.com/${author.handles.instagram}`} target="_blank" rel="noopener noreferrer" className="instagram">
               <FontAwesomeIcon icon={faInstagram} size="2x" fixedWidth />
-            </a>
+            </OutboundLink>
           </li>
           <li>
-            <a href={`https://www.github.com/${author.handles.github}`} target="_blank" rel="noopener noreferrer" className="github">
+            <OutboundLink href={`https://www.github.com/${author.handles.github}`} target="_blank" rel="noopener noreferrer" className="github">
               <FontAwesomeIcon icon={faGithub} size="2x" fixedWidth />
-            </a>
+            </OutboundLink>
           </li>
           <li>
-            <a href={`https://www.linkedin.com/in/${author.handles.linkedin}`} target="_blank" rel="noopener noreferrer" className="linkedin">
+            <OutboundLink href={`https://www.linkedin.com/in/${author.handles.linkedin}`} target="_blank" rel="noopener noreferrer" className="linkedin">
               <FontAwesomeIcon icon={faLinkedin} size="2x" fixedWidth />
-            </a>
+            </OutboundLink>
           </li>
         </ul>
       </div>

@@ -123,7 +123,7 @@ Might add my CV in the future...
     </CardTitle>
     <CardText>
     Are you interested in my CV? Feel free to download the pdf or check it out on&nbsp;
-    <a href={"https://www.linkedin.com/in/" + author.handles.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin">LinkedIn</a>.
+    OutboundLink href={"https://www.linkedin.com/in/" + author.handles.linkedin} target="_blank" rel="noopener noreferrer" className="linkedin">LinkedIn</OutboundLink>.
     </CardText>
     // Link to cv.pdf generated with latex inside my github
   </CardBody>
