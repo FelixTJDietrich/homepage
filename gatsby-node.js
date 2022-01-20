@@ -126,6 +126,14 @@ exports.createPages = ({ actions, graphql }) => {
       isPermanent: true,
     });
 
+    // Redirect '/blog' to the home page
+    createRedirect({
+      fromPath: '/blog',
+      toPath: '/',
+      redirectInBrowser: true,
+      isPermanent: true,
+    });
+
     return res;
   });
 };
