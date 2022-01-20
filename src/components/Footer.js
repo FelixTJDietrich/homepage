@@ -8,6 +8,7 @@ import {
   faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 
+import { Link } from 'gatsby';
 import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import author from '../util/author';
 
@@ -43,6 +44,9 @@ function Footer() {
           </li>
         </ul>
       </div>
+      <Link to="/privacy" className="link-muted">
+        Privacy policy
+      </Link>
     </div>
   );
 }

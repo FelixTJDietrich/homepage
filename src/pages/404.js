@@ -9,7 +9,7 @@ function NotFoundPage() {
     <Layout>
       <Seo title="404: Not found" />
       <h1>Oops, something went wrong...</h1>
-      <Link className="btn btn-primary text-uppercase" to="/">
+      <Link className="btn btn-primary text-uppercase mb-4" to="/">
         Go home
       </Link>
     </Layout>
