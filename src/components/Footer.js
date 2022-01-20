@@ -19,9 +19,9 @@ function Footer() {
         © Felix T.J. Dietrich 2022
         { new Date().getFullYear() === 2022 ? '' : `-${new Date().getFullYear()}` }
       </div>
-      <p className="text-center">Follow me on social media</p>
+      <p className="text-center mb-2">Follow me on social media</p>
       <div className="footer-social-links">
-        <ul className="social-links-list">
+        <ul className="social-links-list mb-2">
           <li>
             <OutboundLink href={`https://www.twitter.com/${author.handles.twitter}`} target="_blank" rel="noopener noreferrer" className="twitter">
               <FontAwesomeIcon icon={faTwitter} size="2x" fixedWidth />
