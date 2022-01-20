@@ -282,7 +282,7 @@ function PrivacyPolicyPage() {
           <li>
             By email:
             {' '}
-            <a href={`mailto:privacy@felixdietrich.com`} target="_blank" rel="noopener noreferrer" className="email">
+            <a href="mailto:privacy@felixdietrich.com" target="_blank" rel="noopener noreferrer" className="email">
               privacy@felixdietrich.com
             </a>
           </li>
