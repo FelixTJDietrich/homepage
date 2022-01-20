@@ -17,8 +17,9 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import { OutboundLink } from 'gatsby-plugin-google-gtag';
 
+import { Icon } from '@iconify/react';
 import { Location } from '@reach/router';
-import { faAdjust } from '@fortawesome/free-solid-svg-icons';
+
 import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 import author from '../util/author';
 
@@ -41,15 +42,18 @@ class Header extends React.Component {
                 <div
                   className="toggle-theme"
                   style={{
-                    WebkitTransform: theme === 'dark' ? 'scaleX(1)' : 'scaleX(-1)',
-                    transform: theme === 'dark' ? 'scaleX(1)' : 'scaleX(-1)',
+                    WebkitTransform: theme === 'dark' ? 'scaleX(-1)' : 'scaleX(1)',
+                    transform: theme === 'dark' ? 'scaleX(-1)' : 'scaleX(1)',
                   }}
                 >
                   <Button
                     onClick={() => toggleTheme(theme === 'dark' ? 'light' : 'dark')}
                   >
-                    {theme === 'dark' ? 'light' : 'dark'}
-                    _mode
+                    {
+                    theme === 'dark'
+                      ? <Icon icon="eva:sun-fill" />
+                      : <Icon icon="eva:moon-fill" />
+                    }
                   </Button>
                 </div>
               </div>
