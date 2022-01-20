@@ -25,10 +25,51 @@
     .toggle-theme-container > .toggle-theme {
       display: inline-block;
       text-align: right;
-      color: var(--primaryText);
-      &:hover {
-        opacity: 0.8;
+      transition: all 0.2s ease-out;
+
+      & > button {
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        outline: none;
+        box-shadow: none;
+        cursor: pointer;
+        color: var(--link-muted);
+
+        font-family: 'Material Icons';
+        font-size: 32px;
+
+        &:hover {
+          color: var(--primaryText);
+          outline: none;
+          box-shadow: none;
+        }
+    
+        &:focus {
+          outline: none !important;
+          box-shadow: none !important;
+        }
       }
+      // & > button {
+      //   background: none !important;
+      //   border: none !important;
+      //   padding: 0 !important;
+      //   outline: none;
+      //   box-shadow: none;
+      //   cursor: pointer;
+      
+      //   transition: all 0.1s ease-out;
+
+      //   &:hover {
+      //     outline: none;
+      //     box-shadow: none;
+      //   }
+
+      //   &:focus {
+      //     outline: none !important;
+      //     box-shadow: none !important;
+      //   }
+      // }
     }
   }
 

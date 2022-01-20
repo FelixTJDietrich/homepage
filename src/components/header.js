@@ -6,6 +6,7 @@ import {
   NavItem,
   NavLink,
   Container,
+  Button,
 } from 'reactstrap';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -44,11 +45,12 @@ class Header extends React.Component {
                     transform: theme === 'dark' ? 'scaleX(1)' : 'scaleX(-1)',
                   }}
                 >
-                  <FontAwesomeIcon
-                    icon={faAdjust}
+                  <Button
                     onClick={() => toggleTheme(theme === 'dark' ? 'light' : 'dark')}
-                    size="2x"
-                  />
+                  >
+                    {theme === 'dark' ? 'light' : 'dark'}
+                    _mode
+                  </Button>
                 </div>
               </div>
             )}
