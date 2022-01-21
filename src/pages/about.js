@@ -64,7 +64,7 @@ function AboutPage() {
             <br />
             self-improvement, freedom, peace, emotional intelligence, open mindedness,
             work-life-balance, self-expression, identity, being more social,
-            social skills, productivity
+            social skills
           </CardText>
           <CardText>
             <b>Psychological:</b>
@@ -75,7 +75,7 @@ function AboutPage() {
             <b>General:</b>
             <br />
             blogging, languages, Japanese, Japan, long hair, spaceflight, travelling,
-            culture, people, technology, money, internet
+            culture, people, technology, money, productivity, internet
           </CardText>
         </CardBody>
       </Card>
