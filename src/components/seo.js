@@ -105,11 +105,11 @@ function Seo({
         },
         {
           name: 'twitter:card',
-          content: 'summary_large_image',
+          content: 'summary',
         },
         {
           name: 'twitter:creator',
-          content: site.siteMetadata?.author || '',
+          content: site.siteMetadata.author,
         },
         {
           name: 'twitter:title',
@@ -118,10 +118,6 @@ function Seo({
         {
           name: 'twitter:description',
           content: metaDescription,
-        },
-        {
-          name: 'twitter:image',
-          content: defaultImage,
         },
       ].concat(articleMeta).concat(meta)}
     />
