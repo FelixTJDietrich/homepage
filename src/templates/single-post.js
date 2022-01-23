@@ -35,9 +35,17 @@ function SinglePost({ data, pageContext }) {
   //   url: postUrl,
   // };
 
+  const articleSEO = {
+    section: post.tags[0],
+    tags: post.tags,
+    publishedTime: post.publishedTimeIso,
+    modifiedTime: file.modifiedTimeIso,
+    imagePublicUrl: post.image.publicURL,
+  };
+
   return (
     <Layout>
-      <Seo title={post.title} />
+      <Seo title={post.title} description={data.markdownRemark.excerpt} article={articleSEO} />
       <div className="blog-post">
         {post.image
           && (
@@ -176,15 +184,18 @@ export const postQuery = graphql`
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       id
       html
+      excerpt
       timeToRead
       frontmatter {
         title
         date(formatString: "MMM D, YYYY")
+        publishedTimeIso: date
         tags
         image {
           childImageSharp {
             gatsbyImageData(height: 400)
           }
+          publicURL
         }
       }
       parent {
@@ -192,6 +203,7 @@ export const postQuery = graphql`
           relativePath
           sourceInstanceName
           modifiedTime(formatString: "MMM D, YYYY")
+          modifiedTimeIso: modifiedTime
         }
       }
     }

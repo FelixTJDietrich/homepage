@@ -2,8 +2,9 @@ module.exports = {
   siteMetadata: {
     title: 'Felix T.J. Dietrich',
     description: 'A website where Felix T.J. Dietrich shows his work.',
+    image: '/static/author-538c291f100940f8894db110d87d641b.jpg',
     author: '@FelixTJDietrich',
-    siteUrl: 'https://felixdietrich.com/',
+    siteUrl: 'https://felixdietrich.com',
   },
   plugins: [
     {

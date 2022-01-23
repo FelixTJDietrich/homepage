@@ -45,7 +45,7 @@ function Footer() {
         </ul>
       </div>
       <Link to="/privacy" className="link-muted">
-        Privacy policy
+        Privacy Policy
       </Link>
     </div>
   );
