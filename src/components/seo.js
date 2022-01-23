@@ -8,23 +8,32 @@ function Seo({
   description, lang, meta, title, image, article,
 }) {
   const { pathname } = useLocation();
-  const { site } = useStaticQuery(
+  const { site, allImageSharp } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             title
             description
-            image
             author
             siteUrl
+          }
+        }
+        allImageSharp(filter: {resize: {originalName: {eq: "author.jpg"}}}, limit: 1) {
+          edges {
+            node {
+              resize {
+                src
+              }
+            }
           }
         }
       }
     `,
   );
 
-  let defaultImage = `${site.siteMetadata.siteUrl}${image || site.siteMetadata.image}`;
+  const defaultImageUrl = allImageSharp.edges[0].node.resize.src;
+  let defaultImage = `${site.siteMetadata.siteUrl}${image || defaultImageUrl}`;
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata.title;
   const url = `${site.siteMetadata.siteUrl}${pathname}`;
@@ -74,10 +83,6 @@ function Seo({
         {
           name: 'description',
           content: metaDescription,
-        },
-        {
-          name: 'image',
-          content: defaultImage,
         },
         {
           name: 'og:site_name',
