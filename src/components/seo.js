@@ -46,10 +46,19 @@ function Seo({
       publishedTime,
       modifiedTime,
       imagePublicUrl,
+      timeToRead,
     } = article;
     defaultImage = `${site.siteMetadata.siteUrl}${imagePublicUrl}`;
 
     articleMeta = [
+      {
+        name: 'twitter:label1',
+        content: 'Reading time',
+      },
+      {
+        name: 'twitter:data1',
+        content: `${timeToRead} min read`,
+      },
       {
         name: 'article:section',
         content: section,
@@ -81,20 +90,20 @@ function Seo({
       titleTemplate={defaultTitle ? `%s · ${defaultTitle}` : null}
       meta={[
         {
+          property: 'og:title',
+          content: title,
+        },
+        {
           name: 'description',
           content: metaDescription,
         },
         {
-          name: 'og:site_name',
+          property: 'og:site_name',
           content: defaultTitle,
         },
         {
           property: 'og:url',
           content: url,
-        },
-        {
-          property: 'og:title',
-          content: title,
         },
         {
           property: 'og:description',
@@ -110,7 +119,7 @@ function Seo({
         },
         {
           name: 'twitter:card',
-          content: 'summary',
+          content: 'summary_large_image',
         },
         {
           name: 'twitter:creator',
