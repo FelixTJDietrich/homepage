@@ -48,7 +48,9 @@ function Seo({
       imagePublicUrl,
       timeToRead,
     } = article;
-    defaultImage = `${site.siteMetadata.siteUrl}${imagePublicUrl}`;
+    if (imagePublicUrl) {
+      defaultImage = `${site.siteMetadata.siteUrl}${imagePublicUrl}`;
+    }
 
     articleMeta = [
       {

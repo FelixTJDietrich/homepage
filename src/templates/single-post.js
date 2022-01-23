@@ -40,7 +40,8 @@ function SinglePost({ data, pageContext }) {
     tags: post.tags,
     publishedTime: post.publishedTimeIso,
     modifiedTime: file.modifiedTimeIso,
-    imagePublicUrl: post.image.publicURL,
+    imagePublicUrl: post.image?.publicURL,
+    timeToRead: data.markdownRemark.timeToRead,
   };
 
   return (
