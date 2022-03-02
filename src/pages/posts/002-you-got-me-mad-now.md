@@ -33,7 +33,7 @@ Billy Herrington (July 14, 1969 — March 2, 2018) was an American model and por
 
 On September 30, 2007, a wrestling video clip of one of Billy Herrington’s gay porns called "Workout: Muscle Fantasies 3" (1999) from Can-Am Productions, was uploaded to [Nico Nico Douga (NND)](https://www.nicovideo.jp), a Japanese video-sharing website. The video ["Professional Muscular Pants Wresteling"](https://www.nicovideo.jp/watch/sm1175788) quickly gained popularity and became one of the most-watched videos of the website. Amongst other clips, this video soon turned into a popular source for bait-and-switch trolling and evolved into the Gachimuchi subculture.
 
-Gachimuchi (Japanese: ガチムチ, lit. "muscular chubby") or Gachi refers to a large group of musical remixes and comedic edited videos using homoerotic wrestling videos in an entertaining, funny, and creative way. The meme gained popularity especially in Japan, China, Russia, and later in the western-world, mostly through the live streaming platform [Twitch.tv](https://www.twitch.tv). There are numerous mashups out there, with at least over 110,000 uploaded videos to YouTube alone so far ([Source](http://honisoit.com/2018/03/the-life-and-death-of-a-pornstar/)).
+Gachimuchi (Japanese: ガチムチ, lit. "muscular chubby") or Gachi refers to a large group of musical remixes and comedic edited videos using homoerotic wrestling videos in an entertaining, funny, and creative way. The meme gained popularity especially in Japan, China, Russia, and later in the western-world, mostly through the live streaming platform [Twitch.tv](https://www.twitch.tv). There are numerous mashups out there, with at least over 110,000 uploaded videos to YouTube alone, so far ([Source](http://honisoit.com/2018/03/the-life-and-death-of-a-pornstar/)).
 
 Billy Herrington embraced the meme. He was appreciative and honored by the amount of work and creativity it took to create gachi remixes. He interacted a lot with his fans and seemed to me to be a very open-minded, positive, and loving person that cared about each and everyone that he saw struggling.
 
@@ -51,7 +51,7 @@ Forsen’s community called the "Forsen Boys", "Forsen Bajs", or just "Bjas", ar
 
 Around late 2014, early 2015, Forsen started using the music streaming service [plug.dj](http://plug.dj) for letting Twitch chat be the DJ of his stream. They could enqueue any YouTube video to be used as background audio. People started using it to enqueue music, meme videos, "cancer" or also "earrape" music, soon followed by the first gachi remixes. And thus, gachimuchi was introduced, amplified, and spread not only to his stream but also across the whole of mainstream Twitch.
 
-I have fond memories of just listening to gachi music all day. I would listen to it even on my own, also when going on walks with my dogs. It is strange to explain, the fact that it was so fringe and impossible to explain to most people made it strangly enjoyable to me. It was kind of my own thing that I only enjoyed in secret with people on Twitch and the internet. I had this strong sense of belonging to the people online, which made me all the more disconnected with people offline.
+I have fond memories of just listening to gachi music all day. I would listen to it even on my own, also when going on walks with my dogs. It is strange to explain, the fact that it was so fringe and impossible to explain to most people made it strangly enjoyable to me. It was kind of my own thing that I only enjoyed in secret with people on Twitch and the internet.
 
 
 ## Gachi vs. Anime
@@ -66,7 +66,7 @@ Gachimuchi also originated from Japan and is therefore arguably a bit weeb. Ther
 
 After Billy's passing, the two fanbases seemed to be more in peace with each other, stating that Billy did not want us to fight.
 
-The following Reddit comment sums up pretty well the message behind gachimuchi in reply to a gachi vs. anime post: *(Warning: Edgy language!)*
+This following Reddit comment (copy pasta?) sums up pretty well the message behind gachimuchi in reply to a gachi vs. anime post: *(Warning: Edgy language!)*
 <div class="videoWrapper">
   <iframe id="reddit-embed" src="https://www.redditmedia.com/r/forsen/comments/mrddyb/weebs_if_gachi_is_really_weeb_then_why_are_there/gulv3ok/?depth=1&amp;showmore=false&amp;embed=true&amp;showmedia=false" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" height="546" width="640" scrolling="no"></iframe>
 </div>
@@ -79,7 +79,7 @@ One day at school, a friend pointed out in front of class: "Listen guys, Felix i
 
 My sentiment of disliking anime, and the weirdos who watch it, got carried on until I was about 19, around 2017. I rewatched Avatar the Last Airbender (2005), a show I always liked to watch on Nickelodeon as a child, arguably not anime. Then I watched its spin-off: The Legend of Korra (2012). I was wondering if there are similar shows out there and found the anime Full Metal Alchemist: Brotherhood (2009). I watched its 64 episodes in 3 days... I enjoyed it even though it’s anime. Still, I was opposed to watching anime, but I was bored. A good friend had mentioned Attack on Titan (2013). I watched the first episode. I watched the second episode. I watched the rest of season two (2017). I got hooked again. I watched the next anime. And the next. Thus, my second anime phase had begun.
 
-Opinions of other ignorant people destroyed this medium for me initially. I really began to like anime again and felt really stupid for letting other people compromise my interests and self. I felt ignorant myself because I also carried around this negative sentiment for people who like anime for too long. Same holds for other things as well, I realized that I'm ignorant, early 2018.
+Opinions of other ignorant people destroyed this medium for me initially. I really began to like anime again and felt really stupid for letting other people compromise my interests and self. I felt ignorant myself because I also carried around this negative sentiment around anime for too long. Same holds for other things as well, I realized that I'm ignorant, early 2018.
 
 
 ## You got me mad now - 歪みねぇな！
@@ -106,7 +106,7 @@ I was a self-hating anime fan now and I had felt some mindless hatred against mo
 
 Billy Herrington was a magnificent man who taught me a lot of important lessons that I can not even put into words. Gachimuchi and Twitch was such an integral part of my enjoyment in life at that time, and the community behind it gave me a place where I could belong. I'm really grateful for that time.
 
-I'm trying to live a life of *yugami nee na* and have reflected on Aniki's passing every year so far. With each year I'm getting madder and madder, accepting myself more, doing less people pleasing, and being more comfortable and confident in being myself. I have come a long way with self growth but I still have a lot to learn about the teachings of gachimuchi.
+I'm trying to live a life of *yugami nee na* and have reflected on Aniki's passing every year, so far. With each year I'm getting madder and madder, accepting myself more, doing less people pleasing, and being more comfortable and confident in being myself. I have come a long way with self growth but I still have a lot to learn about the teachings of gachimuchi.
 
 It has been a journey.
 
